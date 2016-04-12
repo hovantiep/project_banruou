@@ -52,14 +52,24 @@ class CateController extends Controller
 
     }
 
-    public function getEdit()
+    public function getEdit($id)
     {
-
-        return view('admin.cate.edit');
+        $cate = Cate::find($id);
+        $parent = Cate::select('id', 'name', 'parent_id')->where('id', '!=', $id)->get();
+        return view('admin.cate.edit')->with('cate', $cate)->with('parent', $parent);
     }
 
-    public function postEdit()
+    public function postEdit($id, CateRequest $request)
     {
-
+        $cate = Cate::find($id);
+        $cate->name = $request->txtCateName;
+        $cate->alias = strToSlug($request->txtCateName);
+        $cate->order = $request->txtOrder;
+        $cate->parent_id = $request->sltCate;
+        $cate->keywords = $request->txtKeywords;
+        $cate->description = $request->txtDescription;
+        $cate->update();
+        return redirect()->route('admin.cate.getList')
+            ->with(['level' => 'success', 'flash_message' => 'Cập nhật thành công!']);
     }
 }

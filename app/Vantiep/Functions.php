@@ -69,12 +69,13 @@ function strToSlug($str, $modeLower = 2)
  * @param int $parent
  * @param string $str
  */
-function cate_parent($data, $parent = 0, $str = "", $select = 1)
+function cate_parent($data, $parent = 0, $str = "", $select = 0)
 {
     foreach ($data as $value) {
         $id = $value->id;
         $name = $value->name;
-        if ($value->parent_id == $parent) {
+        $parent_id = $value->parent_id;
+        if ($parent_id == $parent) {
             if ($select != 0 && $id == $select) {
                 echo "<option value='$id' selected='selected'>$str $name</option>";
             } else {
