@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cate;
 use App\Http\Requests\CateRequest;
-
+use Illuminate\Http\Request;
 
 class CateController extends Controller
 {
@@ -59,8 +59,12 @@ class CateController extends Controller
         return view('admin.cate.edit')->with('cate', $cate)->with('parent', $parent);
     }
 
-    public function postEdit($id, CateRequest $request)
+    public function postEdit($id, Request $request)
     {
+        $this->validate($request,
+            ['txtCateName' => 'required'],
+            ['txtCateName.required' => 'Vui lòng nhập tên Cate!']
+        );
         $cate = Cate::find($id);
         $cate->name = $request->txtCateName;
         $cate->alias = strToSlug($request->txtCateName);
@@ -68,8 +72,9 @@ class CateController extends Controller
         $cate->parent_id = $request->sltCate;
         $cate->keywords = $request->txtKeywords;
         $cate->description = $request->txtDescription;
-        $cate->update();
+        $cate->save();
         return redirect()->route('admin.cate.getList')
             ->with(['level' => 'success', 'flash_message' => 'Cập nhật thành công!']);
+
     }
 }

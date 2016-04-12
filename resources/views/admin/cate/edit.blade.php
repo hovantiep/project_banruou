@@ -4,7 +4,8 @@
 @section('content')
 
     <div class="col-lg-7" style="padding-bottom:120px">
-        <form action="" method="POST">
+        @include('admin.block.vali_msg')
+        <form action="{!! route('admin.cate.getEdit',$cate->id) !!}" method="POST">
             <div class="form-group">
                 {!! $cate->parent_id !!}
                 <label>Category Parent</label>
@@ -30,7 +31,8 @@
             </div>
             <div class="form-group">
                 <label>Category Description</label>
-                <textarea class="form-control" rows="3" name="txtDescription"></textarea>
+                <textarea class="form-control" rows="3"
+                          name="txtDescription">{!! old('txtDescription',$cate->description) !!}</textarea>
             </div>
             <button type="submit" class="btn btn-default">Category Edit</button>
             <button type="reset" class="btn btn-default">Reset</button>

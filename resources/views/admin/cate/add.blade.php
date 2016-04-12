@@ -4,13 +4,7 @@
 @section('content')
 
     <div class="col-lg-7" style="padding-bottom:120px">
-        @if(count($errors) >0 )
-            <ul class="alert alert-danger">
-                @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        @endif
+        @include('admin.block.vali_msg')
         <form action="{{ route('admin.cate.postAdd') }}" method="POST">
             <div class="form-group">
                 <label>Category Parent</label>
