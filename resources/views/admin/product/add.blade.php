@@ -16,10 +16,12 @@
             <div class="form-group">
                 <label>Intro</label>
                 <textarea class="form-control" rows="3" name="txtIntro"></textarea>
+                <script type="text/javascript">ckeditor('txtIntro')</script>
             </div>
             <div class="form-group">
                 <label>Content</label>
                 <textarea class="form-control" rows="3" name="txtContent"></textarea>
+                <script type="text/javascript">ckeditor('txtContent')</script>
             </div>
             <div class="form-group">
                 <label>Images</label>
@@ -44,6 +46,7 @@
             </div>
             <button type="submit" class="btn btn-default">Product Add</button>
             <button type="reset" class="btn btn-default">Reset</button>
+            <input type="hidden" name="_token" value="{!! csrf_token() !!}">
         </form>
     </div>
 
