@@ -63,7 +63,7 @@ function strToSlug($str, $modeLower = 2)
 }
 
 /**
- * Tạo select bằng đệ quy
+ * Tạo select bằng đệ quy chính xác Category
  * @param $data : array id, name, parent_id
  * @param int $select
  * @param int $parent
