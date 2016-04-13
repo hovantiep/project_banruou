@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214759ee-2884-4a95-8633-b787aa354d71" name="Default" comment="Finished add &amp; delete &amp; edit&#10;- Phần hiển thị select cấp 2 chưa đúng">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_laravel.iws" />
@@ -602,7 +603,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460507696952</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finished add &amp; delete &amp; edit&#10;- Phần hiển thị select cấp 2 chưa đúng">
+      <created>1460507861117</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1460507861117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
