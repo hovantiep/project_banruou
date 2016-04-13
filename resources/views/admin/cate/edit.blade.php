@@ -5,9 +5,8 @@
 
     <div class="col-lg-7" style="padding-bottom:120px">
         @include('admin.block.vali_msg')
-        <form action="{!! route('admin.cate.getEdit',$cate->id) !!}" method="POST">
+        <form action="{!! route('admin.cate.postEdit',$cate->id) !!}" method="POST">
             <div class="form-group">
-                {!! $cate->parent_id !!}
                 <label>Category Parent</label>
                 <select class="form-control" name="sltCate">
                     <option value="0">Please Choose Category</option>

@@ -56,7 +56,9 @@ class CateController extends Controller
     {
         $cate = Cate::find($id);
         $parent = Cate::select('id', 'name', 'parent_id')->where('id', '!=', $id)->get();
-        return view('admin.cate.edit')->with('cate', $cate)->with('parent', $parent);
+        return view('admin.cate.edit')
+            ->with('cate', $cate)
+            ->with('parent', $parent);
     }
 
     public function postEdit($id, Request $request)
