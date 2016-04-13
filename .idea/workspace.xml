@@ -596,7 +596,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460507689601</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished add &amp; delete &amp; edit&#10;- Phần hiển thị select cấp 2 chưa đúng">
+      <created>1460507696952</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1460507696952</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
