@@ -66,9 +66,7 @@ class CateController extends Controller
             ['txtCateName.required' => 'Vui lòng nhập tên Cate!']
         );
         $cate = Cate::find($id);
-        /*echo "<pre>";
-        print_r(Cate::all()->pluck('name', 'id'));
-        echo "</pre>";*/
+
         $cate->name = $request->txtCateName;
         $cate->alias = strToSlug($request->txtCateName);
         $cate->order = $request->txtOrder;
