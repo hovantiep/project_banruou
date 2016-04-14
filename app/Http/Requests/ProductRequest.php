@@ -24,9 +24,9 @@ class ProductRequest extends Request
     public function rules()
     {
         return [
-//            'sltCate'=>'not_in:0',
-//            'txtName'=>'required|unique:products,name',
-//            'fImages'=>'required|image'
+            'sltCate'=>'not_in:0',
+            'txtName'=>'required|unique:products,name',
+            'fImages'=>'required|image'
         ];
     }
     public function messages(){
