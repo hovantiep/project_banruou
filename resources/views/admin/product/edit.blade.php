@@ -10,6 +10,9 @@
         .img-thumbnail-detail {
             max-width: 200px;
         }
+        #insert{margin-top: 20px;}
+
+        /*.icon_del{position:relative;top: -100px;left: -35px;}*/
     </style>
     @include('admin.block.vali_msg')
     <form action="" method="POST">
@@ -72,11 +75,15 @@
         <div class="col-lg-4">
             @foreach($productImages as $key => $productImage)
                 <div class="form-group" id="hinh{!! $key !!}">
+                    <a href="" class="btn btn-danger btn-circle icon_del"><i class="fa fa-times"></i></a>
                     <img src="{!! asset('resources/upload/detail/'.$productImage->image) !!}"
                          alt="{!! $productImage->image !!}"
                          class="img-responsive img-thumbnail img-thumbnail-detail" id="hinh{!! $key !!}">
+                    <input type="file" name="fProductDetail[]" class="file">
                 </div>
             @endforeach
+            <button type="button" class="btn btn-primary" id="addImages">Add Image</button>
+            <div id="insert"></div>
         </div>
         </div>
     </form>
