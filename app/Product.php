@@ -15,7 +15,7 @@ class Product extends Model
     }
 
     public function user(){
-    	return $this_belongsTo('App\User','user_id')
+    	return $this->belongsTo('App\User','user_id');
     }
 
     public function image(){

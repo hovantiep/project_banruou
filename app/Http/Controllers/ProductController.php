@@ -6,9 +6,7 @@ use App\Cate;
 use App\Http\Requests;
 use App\Http\Requests\ProductRequest;
 use App\Product;
-use App\ProductImage;
 use Illuminate\Support\Facades\Input;
-
 class ProductController extends Controller
 {
     public function getAdd()
@@ -21,8 +19,9 @@ class ProductController extends Controller
     {
         $product = new Product();
         $file = $productRequest->file('fImages');
-        $file_name = $file->getClientOriginalName();
-
+        if (isset($file)) {
+            $file_name = $file->getClientOriginalName();
+        }
         $product->name = $productRequest->txtName;
         $product->alias = strToSlug($productRequest->txtName);
         $product->price = $productRequest->txtPrice;
@@ -39,20 +38,21 @@ class ProductController extends Controller
         $product->save();
 
         //Lưu Product Image
-//        $product_id = $product->id;
-//        if (Input::hasFile('fProductDetail')) {
-//            foreach (Input::file('fProductDetail') as $pFile) {
-//                $product_image = new ProductImage();
-//                if (isset($pFile)) {
-//                    var_dump($pFile);
-//                    $pFile_name = $pFile->getClientOriginalName();
-//                    $product_image->image = $pFile_name;
-//                    $product_image->product_id = $product_id;
-//                    $pFile->move('resources/upload/detail/', $pFile_name);
-//                    $product_image->save();
-//                }
-//            }
-//        }
+        $product_id = $product->id;
+        if (Input::hasFile('fProductDetail')) {
+            foreach (Input::file('fProductDetail') as $pFile) {
+                $product_image = new ProductImage();
+                if (isset($pFile)) {
+                	echo $product_id;
+                   //  var_dump($pFile);
+                   // $pFile_name = $pFile->getClientOriginalName();
+                   // $product_image->image = $pFile_name;
+                   // $product_image->product_id = $product_id;
+                   // $pFile->move('resources/upload/detail/', $pFile_name);
+                   // $product_image->save();
+                }
+            }
+        }
 
         /*return redirect()->route('admin.product.getList')
             ->with(['level' => 'success', 'flash_message' => 'Thêm thành công!']);*/
