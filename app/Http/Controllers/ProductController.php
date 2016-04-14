@@ -63,4 +63,25 @@ class ProductController extends Controller
             ->with('products', $products)
             ->with('i', 1);
     }
+
+    public function getDelete($id)
+    {
+//        1. Xóa product
+//        2. Xóa image của Product đó
+//        3. Xóa image trong bảng Product_Images
+
+//      Xóa ảnh trong Product_Image
+        $productImages = Product::find($id)->productImage;
+        foreach ($productImages as $productImage) {
+            \File::delete('resources/upload/detail/' . $productImage->image);
+        }
+//      Xóa ảnh trong Product
+        $product = Product::find($id);
+        \File::delete('resources/upload/' . $product->image);
+//      Nếu xóa record Product thành công -> xóa luôn product_Image
+//      (relation: xóa cha-> con xóa theo)
+        $product->delete();
+        return redirect()->route('admin.product.getList')
+            ->with(['level' => 'success', 'flash_message' => 'Xóa thành công!']);
+    }
 }
