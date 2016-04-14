@@ -10,30 +10,26 @@
             <th>Name</th>
             <th>Price</th>
             <th>Date</th>
-            <th>Status</th>
+            <th>Category</th>
             <th>Delete</th>
             <th>Edit</th>
         </tr>
         </thead>
         <tbody>
-        <tr class="odd gradeX" align="center">
-            <td>1</td>
-            <td>Áo Thun Nana</td>
-            <td>200.000 VNĐ</td>
-            <td>3 Minutes Age</td>
-            <td>Hiện</td>
-            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
-        </tr>
-        <tr class="even gradeC" align="center">
-            <td>2</td>
-            <td>Áo Thun Polo</td>
-            <td>250.000 VNĐ</td>
-            <td>1 Hours Age</td>
-            <td>Ẩn</td>
-            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
-        </tr>
+        @foreach($products as $prod)
+            <tr class="odd gradeX" align="center">
+                <td>{!! $i++ !!}</td>
+                <td>{!! $prod->name !!}</td>
+                <td align="right">{!! number_format($prod->price,0,',','.') !!} VNĐ</td>
+                <td>{!! Carbon\Carbon::createFromTimestamp(strtotime($prod->created_at))->diffForHumans() !!}</td>
+                <td>{{ \App\Product::find($prod->id)->cate->name }}</td>
+                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a
+                            onclick="return confirmDel('Bạn có chắc chắn xóa')"
+                            href="{!! route('admin.product.getDelete',$prod->id) !!}"> Delete</a></td>
+                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a
+                            href="{!! route('admin.product.getEdit',$prod->id) !!}">Edit</a></td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 

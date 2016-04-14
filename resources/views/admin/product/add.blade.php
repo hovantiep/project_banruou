@@ -55,7 +55,7 @@
             @for($i=1;$i<=10;$i++)
                 <div class="form-group">
                     <label for="">Product Image {!! $i !!}</label>
-                    <input type="file" name="fProductDetail[]">
+                    <input type="file" name="fProductDetail[]" multiple>
                 </div>
             @endfor
         </div>
