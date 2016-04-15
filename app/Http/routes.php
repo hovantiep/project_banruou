@@ -53,7 +53,7 @@ Route::group(['prefix' => 'admin'], function () {
     });
 
     Route::group(['prefix' => 'user'], function () {
-        // Route PRODUCT
+        // Route USER
         Route::get('list', ['as' => 'admin.user.getList', 'uses' => 'UserController@getList']);
 
         Route::get('add', ['as' => 'admin.user.getAdd', 'uses' => 'UserController@getAdd']);
