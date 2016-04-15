@@ -129,8 +129,19 @@ class ProductController extends Controller
         $product->save();
 
 //      Thêm hình ảnh detail
-        
-
+        if (!empty(Request::file('fEditDetail'))) {
+            $file_details = Request::file('fEditDetail');
+            foreach ($file_details as $file_detail) {
+                if (isset($file_detail)) {
+                    $productImage = new ProductImage();
+                    $name = $file_detail->getClientOriginalName();
+                    $file_detail->move('resources/upload/detail/', $name);
+                    $productImage->product_id = $id;
+                    $productImage->image = $name;
+                    $productImage->save();
+                }
+            }
+        }
 
         return redirect()->route('admin.product.getList')
             ->with(['level' => 'success', 'flash_message' => 'Cập nhật thành công!']);

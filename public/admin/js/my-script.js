@@ -26,7 +26,7 @@ function confirmDel(msg) {
  */
 $(document).ready(function () {
     $('#addImages').click(function () {
-        $('#insert').append('<div class="form-group"><input type="file" name="fEditDetail[]" class="file" </div>');
+        $('#insert').append('<div class="form-group"><input type="file" name="fEditDetail[]" class="file" multiple></div>');
     });
 });
 

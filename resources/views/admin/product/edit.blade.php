@@ -15,7 +15,7 @@
         /*.icon_del{position:relative;top: -100px;left: -35px;}*/
     </style>
     @include('admin.block.vali_msg')
-    <form action="" method="POST">
+    <form action="" method="POST" name="frmEditProduct" enctype="multipart/form-data">
         <div class="col-lg-7" style="padding-bottom:120px">
             <div class="form-group">
                 <label>Category</label>
@@ -74,12 +74,11 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-4">
             @foreach($productImages as $key => $productImage)
-                <div class="form-group" id="hinh{!! $key !!}">
-                    <a href="" class="btn btn-danger btn-circle icon_del"><i class="fa fa-times"></i></a>
+                <div class="form-group" id="group{!! $key !!}">
                     <img src="{!! asset('resources/upload/detail/'.$productImage->image) !!}"
                          alt="{!! $productImage->image !!}"
-                         class="img-responsive img-thumbnail img-thumbnail-detail" id="hinh{!! $key !!}">
-                    <input type="file" name="fProductDetail[]" class="file">
+                         class="img-responsive img-thumbnail img-thumbnail-detail" id="{!! $productImage->id !!}">
+                    <a href="javascript:void(0)" type="button" id="del_img" class="btn btn-danger btn-circle icon_del"><i class="fa fa-times"></i></a>
                 </div>
             @endforeach
             <button type="button" class="btn btn-primary" id="addImages">Add Image</button>

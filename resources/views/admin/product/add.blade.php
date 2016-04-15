@@ -10,7 +10,7 @@
                 <label>Category</label>
                 <select class="form-control" name="sltCate">
                     <option value="0">Please Choose Category</option>
-                    <?php cate_parent($cate, 0, "", old('sltCate'));?>
+                    {!! cate_parent($cate, 0, "", old('sltCate')) !!}
                 </select>
             </div>
             <div class="form-group">
@@ -35,7 +35,7 @@
             </div>
             <div class="form-group">
                 <label>Images</label>
-                <input type="file" name="fImages" value="{!! old('fImages') !!}" multiple>
+                <input type="file" name="fImages" value="{!! old('fImages') !!}">
             </div>
             <div class="form-group">
                 <label>Product Keywords</label>
