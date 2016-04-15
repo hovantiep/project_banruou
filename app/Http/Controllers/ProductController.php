@@ -7,6 +7,9 @@ use App\Http\Requests;
 use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\ProductImage;
+use Request;
+
+//use Illuminate\Http\Request; // Tắt nếu sử dụng ajax
 
 class ProductController extends Controller
 {
@@ -83,5 +86,65 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->route('admin.product.getList')
             ->with(['level' => 'success', 'flash_message' => 'Xóa thành công!']);
+    }
+
+    public function getEdit($id)
+    {
+        $product = Product::find($id);
+        $cate = Cate::select('id', 'name', 'parent_id')->get();
+        $productImages = Product::find($id)->productImage;
+        return view('admin.product.edit')
+            ->with('cate', $cate)
+            ->with('product', $product)
+            ->with('productImages', $productImages);
+    }
+
+    public function postEdit($id, Request $request)
+    {
+        $product = Product::find($id);
+        $product->name = Request::input('txtName');
+        $product->alias = strToSlug(Request::input('txtName'));
+        $product->price = Request::input('txtPrice');
+        $product->intro = Request::input('txtIntro');
+        $product->content = Request::input('txtContent');
+
+        if (!empty(Request::file('fImages'))) {
+//      Có thay đổi file hình
+            $file = Request::file('fImages');
+            $file_name = $file->getClientOriginalName();
+            $file->move('resources/upload/', $file_name);
+//            Xóa file cũ
+            $delImg = 'resources/upload/' . $product->image;
+            if (\File::exists($delImg)) {
+                \File::delete($delImg);
+            }
+//            Lưu tên file mới
+            $product->image = $file_name;
+        }
+
+        $product->keywords = Request::input('txtKeywords');
+        $product->description = Request::input('txtDescription');
+        $product->user_id = 1;
+        $product->cate_id = Request::input('sltCate');
+        $product->save();
+        return redirect()->route('admin.product.getList')
+            ->with(['level' => 'success', 'flash_message' => 'Cập nhật thành công!']);
+    }
+
+//    Dùng ajax để xóa hình ảnh detail
+    public function getDelImg($id)
+    {
+        if (Request::ajax()) {
+            $idImg = (int)Request::get('idImg');
+            $productImage = ProductImage::find($idImg);
+            if (!empty($productImage)) {
+                $delImg = 'resources/upload/detail/' . $productImage->image;
+                if (\File::exists($delImg)) {
+                    \File::delete($delImg);
+                }
+                $productImage->delete();
+            }
+            return "OK";
+        }
     }
 }
