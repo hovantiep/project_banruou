@@ -127,6 +127,11 @@ class ProductController extends Controller
         $product->user_id = 1;
         $product->cate_id = Request::input('sltCate');
         $product->save();
+
+//      Thêm hình ảnh detail
+        
+
+
         return redirect()->route('admin.product.getList')
             ->with(['level' => 'success', 'flash_message' => 'Cập nhật thành công!']);
     }
