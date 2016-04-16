@@ -2,7 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214759ee-2884-4a95-8633-b787aa354d71" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/accrodianicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/addcart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/arrowcategory.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/avtar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/banner1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/banner2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/bg_direction_nav.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/fancybox/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/brand1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/brand2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/brand3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/brand4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/carousalarrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/fancybox/fancybox_loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/fancybox/fancybox_overlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/fancybox/fancybox_sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/footericon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/glyphicons-halflings-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/glyphicons-halflings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/index3banner.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/index3banner2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/list1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/list2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/list3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/list4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/list5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/list6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/messages.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/offer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/otherdetailicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/otherseperate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/pricetag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/pricetagproduct.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/prodcut-40x40.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/prodcutcart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/product1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/product1a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/product1big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/product2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/product2a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/product2big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/productblog.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/productpageicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/proudctbanner.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/rate.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/remove.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/sale.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/slderleftimg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/smbanner.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/spiral.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/update.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/view.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/image/arrow-down.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/image/arrow-right.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/css/bootstrap-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/bootstrap-tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/pages/category.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/pages/checkout.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/cloud-zoom.1.0.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/css/cloud-zoom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/pages/contact.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/assets/ico/favicon.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/css/fb.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/css/flexslider.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.ba-throttle-debounce.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.carouFredSel-6.1.0-packed.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/css/jquery.fancybox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.fancybox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.flexslider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.mousewheel.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.touchSwipe.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.tweet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/jquery.validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/pages/login.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/pages/product.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/pages/register.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/js/respond.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/user/pages/shopping-cart.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_laravel.iws" />
@@ -24,41 +113,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.771428">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4735883">
-              <caret line="65" column="93" selection-start-line="65" selection-start-column="93" selection-end-line="65" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/user/edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.3714285">
-              <caret line="37" column="45" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.714286">
-              <caret line="83" column="58" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="58" />
+            <state vertical-scroll-proportion="2.2349727">
+              <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -120,11 +179,12 @@
         <option value="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/user/index.blade.php" />
       </list>
     </option>
   </component>
@@ -247,54 +307,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project_laravel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project_laravel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project_laravel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project_laravel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -341,7 +353,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -680,7 +692,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460786013191</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Edit &amp; Delete User (retrict)">
+      <created>1460790103375</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1460790103375</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -772,20 +790,14 @@
     <MESSAGE value="build login" />
     <MESSAGE value="login &amp; logout" />
     <MESSAGE value="Edit &amp; Delete User (retrict)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit &amp; Delete User (retrict)" />
+    <MESSAGE value="build Front pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="build Front pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/user/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09471767">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4857144">
@@ -1117,14 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.771428">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.714286">
@@ -1143,8 +1147,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4735883">
+        <state vertical-scroll-proportion="-18.657143">
           <caret line="65" column="93" selection-start-line="65" selection-start-column="93" selection-end-line="65" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-42.42857">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2349727">
+          <caret line="171" column="55" selection-start-line="171" selection-start-column="55" selection-end-line="171" selection-end-column="55" />
           <folding />
         </state>
       </provider>
