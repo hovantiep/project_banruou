@@ -169,7 +169,7 @@
                             id: "browse",
                             filebrowser: "info:src",
                             hidden: !0,
-                            style: "display:inline-block;margin-top:14px;",
+                            style: "display:inline-blocks;margin-top:14px;",
                             label: a.lang.common.browseServer
                         }]
                     }]

@@ -194,7 +194,7 @@
                         }, {
                             type: "button",
                             id: "browse",
-                            style: "display:inline-block;margin-top:14px;",
+                            style: "display:inline-blocks;margin-top:14px;",
                             align: "center",
                             label: c.lang.common.browseServer,
                             hidden: !0,

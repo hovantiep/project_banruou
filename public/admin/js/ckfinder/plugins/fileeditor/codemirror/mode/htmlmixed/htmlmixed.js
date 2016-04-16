@@ -35,7 +35,7 @@
             var tagName = state.htmlState.tagName;
             var style = htmlMode.token(stream, state.htmlState);
             if (tagName == "script" && /\btag\b/.test(style) && stream.current() == ">") {
-                // Script block: mode to change to depends on type attribute
+                // Script blocks: mode to change to depends on type attribute
                 var scriptType = stream.string.slice(Math.max(0, stream.pos - 100), stream.pos).match(/\btype\s*=\s*("[^"]+"|'[^']+'|\S+)[^<]*$/i);
                 scriptType = scriptType ? scriptType[1] : "";
                 if (scriptType && /[\"\']/.test(scriptType.charAt(0))) scriptType = scriptType.slice(1, scriptType.length - 1);

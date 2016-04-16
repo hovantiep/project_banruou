@@ -477,7 +477,7 @@ CKEDITOR.lang['sv'] = {
     "removeformat": {"toolbar": "Radera formatering"},
     "save": {"toolbar": "Spara"},
     "selectall": {"toolbar": "Markera allt"},
-    "showblocks": {"toolbar": "Visa block"},
+    "showblocks": {"toolbar": "Visa blocks"},
     "sourcearea": {"toolbar": "Källa"},
     "specialchar": {
         "options": "Alternativ för utökade tecken",

@@ -491,7 +491,7 @@ CKEDITOR.lang['fr-ca'] = {
     "stylescombo": {
         "label": "Styles",
         "panelTitle": "Styles de formattage",
-        "panelTitle1": "Styles de block",
+        "panelTitle1": "Styles de blocks",
         "panelTitle2": "Styles en ligne",
         "panelTitle3": "Styles d'objet"
     },

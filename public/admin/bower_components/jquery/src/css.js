@@ -368,7 +368,7 @@ jQuery.each([ "height", "width" ], function( i, name ) {
 jQuery.cssHooks.marginRight = addGetHookIf( support.reliableMarginRight,
 	function( elem, computed ) {
 		if ( computed ) {
-			return jQuery.swap( elem, { "display": "inline-block" },
+			return jQuery.swap( elem, { "display": "inline-blocks" },
 				curCSS, [ elem, "marginRight" ] );
 		}
 	}

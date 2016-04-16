@@ -138,7 +138,7 @@
 
             var prevLineIsList = (state.list !== false);
             if (state.list !== false && state.indentationDiff >= 0) { // Continued list
-                if (state.indentationDiff < 4) { // Only adjust indentation if *not* a code block
+                if (state.indentationDiff < 4) { // Only adjust indentation if *not* a code blocks
                     state.indentation -= state.indentationDiff;
                 }
                 state.list = null;
@@ -199,7 +199,7 @@
                 state.localMode = getMode(RegExp.$1);
                 if (state.localMode) state.localState = state.localMode.startState();
                 switchBlock(stream, state, local);
-                if (modeCfg.highlightFormatting) state.formatting = "code-block";
+                if (modeCfg.highlightFormatting) state.formatting = "code-blocks";
                 state.code = true;
                 return getType(state);
             }
@@ -223,7 +223,7 @@
                 state.localMode = state.localState = null;
                 state.f = inlineNormal;
                 state.block = blockNormal;
-                if (modeCfg.highlightFormatting) state.formatting = "code-block";
+                if (modeCfg.highlightFormatting) state.formatting = "code-blocks";
                 state.code = true;
                 var returnType = getType(state);
                 state.code = false;
@@ -393,7 +393,7 @@
                 }
             }
 
-            // If this block is changed, it may need to be updated in GFM mode
+            // If this blocks is changed, it may need to be updated in GFM mode
             if (ch === '`') {
                 var previousFormatting = state.formatting;
                 if (modeCfg.highlightFormatting) state.formatting = "code";

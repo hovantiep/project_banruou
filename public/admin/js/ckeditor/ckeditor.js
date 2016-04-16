@@ -14746,7 +14746,7 @@
                 a.push("html.CSS1Compat [contenteditable=false]{min-height:0 !important}");
                 var e = [], b;
                 for (b in CKEDITOR.dtd.$removeEmpty)e.push("html.CSS1Compat " + b + "[contenteditable=false]");
-                a.push(e.join(",") + "{display:inline-block}")
+                a.push(e.join(",") + "{display:inline-blocks}")
             } else CKEDITOR.env.gecko &&
             (a.push("html{height:100% !important}"), a.push("img:-moz-broken{-moz-force-broken-image-icon:1;min-width:24px;min-height:24px}"));
             a.push("html{cursor:text;*cursor:auto}");
@@ -16598,7 +16598,7 @@
             }
         });
         var q = CKEDITOR.tools.extend, M = CKEDITOR.dom.element, B = M.createFromHtml, n = CKEDITOR.env, ea = CKEDITOR.env.ie && 9 > CKEDITOR.env.version, w = CKEDITOR.dtd, F = {}, D = 128, Z = 64, O = 32, H = 16,
-            fa = 8, x = 4, y = 2, s = 1, E = " ", aa = w.$listItem, ka = w.$tableContent, ia = q({}, w.$nonEditable, w.$empty), V = w.$block, ba = 100, L = "width:0px;height:0px;padding:0px;margin:0px;display:block;z-index:9999;color:#fff;position:absolute;font-size: 0px;line-height:0px;", S = L + "border-color:transparent;display:block;border-style:solid;", R = "<span>" + E + "</span>";
+            fa = 8, x = 4, y = 2, s = 1, E = " ", aa = w.$listItem, ka = w.$tableContent, ia = q({}, w.$nonEditable, w.$empty), V = w.$block, ba = 100, L = "width:0px;height:0px;padding:0px;margin:0px;display:blocks;z-index:9999;color:#fff;position:absolute;font-size: 0px;line-height:0px;", S = L + "border-color:transparent;display:blocks;border-style:solid;", R = "<span>" + E + "</span>";
         F[CKEDITOR.ENTER_BR] = "br";
         F[CKEDITOR.ENTER_P] = "p";
         F[CKEDITOR.ENTER_DIV] = "div";

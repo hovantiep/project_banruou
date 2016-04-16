@@ -259,7 +259,7 @@
             binmode: 1,     // - prepare binary files for I/O
             bless: 1,     // - create an object
             bootstrap: 1,     //
-            'break': 1,     // - break out of a "given" block
+            'break': 1,     // - break out of a "given" blocks
             caller: 1,     // - get context of the current subroutine call
             chdir: 1,     // - change your current working directory
             chmod: 1,     // - changes the permissions on a list of files
@@ -271,7 +271,7 @@
             close: 1,     // - close file (or pipe or socket) handle
             closedir: 1,     // - close directory handle
             connect: 1,     // - connect to a remote socket
-            'continue': [1, 1], // - optional trailing block in a while or foreach
+            'continue': [1, 1], // - optional trailing blocks in a while or foreach
             'cos': 1,     // - cosine function
             crypt: 1,     // - one-way passwd-style encryption
             dbmclose: 1,     // - breaks binding on a tied dbm file
@@ -340,7 +340,7 @@
             'join': 1,     // - join a list into a string using a separator
             keys: 1,     // - retrieve list of indices from a hash
             kill: 1,     // - send a signal to a process or process group
-            last: 1,     // - exit a block prematurely
+            last: 1,     // - exit a blocks prematurely
             lc: 1,     // - return lower-case version of a string
             lcfirst: 1,     // - return a string with just the next letter in lower case
             length: 1,     // - return the number of bytes in a string
@@ -360,7 +360,7 @@
             msgsnd: 1,     // - send a SysV IPC message to a message queue
             my: 2,    // - declare and assign a local variable (lexical scoping)
             'new': 1,     //
-            next: 1,     // - iterate a block prematurely
+            next: 1,     // - iterate a blocks prematurely
             no: 1,     // - unimport some module symbols or semantics at compile time
             oct: 1,     // - convert a string to an octal number
             open: 1,     // - open a file, pipe, or descriptor
@@ -425,7 +425,7 @@
             shmwrite: 1,     // - write SysV shared memory
             shutdown: 1,     // - close down just half of a socket connection
             'sin': 1,     // - return the sine of a number
-            sleep: 1,     // - block for some number of seconds
+            sleep: 1,     // - blocks for some number of seconds
             socket: 1,     // - create a socket
             socketpair: 1,     // - create a pair of sockets
             'sort': 1,     // - sort a list of values

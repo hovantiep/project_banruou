@@ -66,7 +66,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 });
 
-Route::get('index',function(){
-   return view('user.index');
+Route::get('test',function(){
+   return view('user.pages.home');
 });
 

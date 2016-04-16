@@ -646,7 +646,7 @@
                                     }, {
                                         type: "html",
                                         id: "logo",
-                                        html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-block;">',
+                                        html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-blocks;">',
                                         setup: function () {
                                             this.getElement().$.src = a.logotype;
                                             this.getElement().getParent().setStyles({"text-align": "left"})
@@ -786,7 +786,7 @@
                             children: [{
                                 type: "html",
                                 id: "logo",
-                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-block;">'
+                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-blocks;">'
                             }]
                         }]
                     },
@@ -926,7 +926,7 @@
                             children: [{
                                 type: "html",
                                 id: "logo",
-                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-block;">',
+                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-blocks;">',
                                 setup: function () {
                                     this.getElement().$.src = a.logotype;
                                     this.getElement().getParent().setStyles({"text-align": "center"})
@@ -1038,7 +1038,7 @@
                                 type: "html",
                                 id: "logotype",
                                 label: "WebSpellChecker.net",
-                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-block;">',
+                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-blocks;">',
                                 setup: function () {
                                     this.getElement().$.src = a.logotype;
                                     this.getElement().getParent().setStyles({"text-align": "center"})
@@ -1078,7 +1078,7 @@
                             children: [{
                                 type: "html",
                                 id: "logo",
-                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-block;">',
+                                html: '<img width="99" height="68" border="0" src="" title="WebSpellChecker.net" alt="WebSpellChecker.net" style="display: inline-blocks;">',
                                 setup: function () {
                                     this.getElement().$.src = a.logotype;
                                     this.getElement().getParent().setStyles({"text-align": "center"})
@@ -1138,7 +1138,7 @@
                     id: "options_error",
                     children: [{
                         type: "html",
-                        style: "display: block;text-align: center;white-space: normal!important; font-size: 12px;color:red",
+                        style: "display: blocks;text-align: center;white-space: normal!important; font-size: 12px;color:red",
                         html: "<div></div>",
                         onShow: function () {
                             f = this
@@ -1160,7 +1160,7 @@
                                     type: "checkbox",
                                     id: "IgnoreAllCapsWords",
                                     label: "Ignore All-Caps Words",
-                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-block;white-space: normal;",
+                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-blocks;white-space: normal;",
                                     style: "float:left; min-height: 16px;",
                                     "default": "",
                                     onClick: function () {
@@ -1170,7 +1170,7 @@
                                     type: "checkbox",
                                     id: "IgnoreWordsNumbers",
                                     label: "Ignore Words with Numbers",
-                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-block;white-space: normal;",
+                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-blocks;white-space: normal;",
                                     style: "float:left; min-height: 16px;",
                                     "default": "",
                                     onClick: function () {
@@ -1180,7 +1180,7 @@
                                     type: "checkbox",
                                     id: "IgnoreMixedCaseWords",
                                     label: "Ignore Mixed-Case Words",
-                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-block;white-space: normal;",
+                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-blocks;white-space: normal;",
                                     style: "float:left; min-height: 16px;",
                                     "default": "",
                                     onClick: function () {
@@ -1190,7 +1190,7 @@
                                     type: "checkbox",
                                     id: "IgnoreDomainNames",
                                     label: "Ignore Domain Names",
-                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-block;white-space: normal;",
+                                    labelStyle: "margin-left: 5px; font: 12px/16px arial, sans-serif;display: inline-blocks;white-space: normal;",
                                     style: "float:left; min-height: 16px;",
                                     "default": "",
                                     onClick: function () {

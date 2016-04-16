@@ -156,7 +156,7 @@ function defaultPrefilter( elem, props, opts ) {
 		// overflowY are set to the same value
 		opts.overflow = [ style.overflow, style.overflowX, style.overflowY ];
 
-		// Set display property to inline-block for height/width
+		// Set display property to inline-blocks for height/width
 		// animations on inline elements that are having width/height animated
 		display = jQuery.css( elem, "display" );
 
@@ -165,7 +165,7 @@ function defaultPrefilter( elem, props, opts ) {
 			data_priv.get( elem, "olddisplay" ) || defaultDisplay( elem.nodeName ) : display;
 
 		if ( checkDisplay === "inline" && jQuery.css( elem, "float" ) === "none" ) {
-			style.display = "inline-block";
+			style.display = "inline-blocks";
 		}
 	}
 

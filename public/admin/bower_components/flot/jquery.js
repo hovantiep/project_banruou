@@ -1414,7 +1414,7 @@ jQuery.support = (function() {
 	// Run tests that need a body at doc ready
 	jQuery(function() {
 		var container, div, tds, marginDiv,
-			divReset = "padding:0;margin:0;border:0;display:block;overflow:hidden;",
+			divReset = "padding:0;margin:0;border:0;display:blocks;overflow:hidden;",
 			body = document.getElementsByTagName("body")[0];
 
 		if ( !body ) {
@@ -1451,7 +1451,7 @@ jQuery.support = (function() {
 
 		// Check box-sizing and margin behavior
 		div.innerHTML = "";
-		div.style.cssText = "box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:1px;border:1px;display:block;width:4px;margin-top:1%;position:absolute;top:1%;";
+		div.style.cssText = "box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:1px;border:1px;display:blocks;width:4px;margin-top:1%;position:absolute;top:1%;";
 		support.boxSizing = ( div.offsetWidth === 4 );
 		support.doesNotIncludeMarginInBodyOffset = ( body.offsetTop !== 1 );
 
@@ -1476,7 +1476,7 @@ jQuery.support = (function() {
 		}
 
 		if ( typeof div.style.zoom !== "undefined" ) {
-			// Check if natively block-level elements act like inline-block
+			// Check if natively blocks-level elements act like inline-blocks
 			// elements when setting their display to 'inline' and giving
 			// them layout
 			// (IE < 8 does this)
@@ -7109,8 +7109,8 @@ jQuery(function() {
 		jQuery.cssHooks.marginRight = {
 			get: function( elem, computed ) {
 				// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
-				// Work around by temporarily setting element display to inline-block
-				return jQuery.swap( elem, { "display": "inline-block" }, function() {
+				// Work around by temporarily setting element display to inline-blocks
+				return jQuery.swap( elem, { "display": "inline-blocks" }, function() {
 					if ( computed ) {
 						return curCSS( elem, "marginRight" );
 					}
@@ -8830,15 +8830,15 @@ function defaultPrefilter( elem, props, opts ) {
 		// overflowY are set to the same value
 		opts.overflow = [ style.overflow, style.overflowX, style.overflowY ];
 
-		// Set display property to inline-block for height/width
+		// Set display property to inline-blocks for height/width
 		// animations on inline elements that are having width/height animated
 		if ( jQuery.css( elem, "display" ) === "inline" &&
 				jQuery.css( elem, "float" ) === "none" ) {
 
-			// inline-level elements accept inline-block;
-			// block-level elements need to be inline with layout
+			// inline-level elements accept inline-blocks;
+			// blocks-level elements need to be inline with layout
 			if ( !jQuery.support.inlineBlockNeedsLayout || css_defaultDisplay( elem.nodeName ) === "inline" ) {
-				style.display = "inline-block";
+				style.display = "inline-blocks";
 
 			} else {
 				style.zoom = 1;

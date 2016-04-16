@@ -65,7 +65,7 @@ $.extend($.fn, {
 						}
 						validator.settings.submitHandler.call( validator, validator.currentForm );
 						if (validator.submitButton) {
-							// and clean up afterwards; thanks to no-block-scope, hidden can be referenced
+							// and clean up afterwards; thanks to no-blocks-scope, hidden can be referenced
 							hidden.remove();
 						}
 						return false;

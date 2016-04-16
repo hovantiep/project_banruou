@@ -5756,7 +5756,7 @@
 
     // LINE WIDGETS
 
-    // Line widgets are block elements displayed above or below a line.
+    // Line widgets are blocks elements displayed above or below a line.
 
     var LineWidget = CodeMirror.LineWidget = function (cm, node, options) {
         if (options) for (var opt in options) if (options.hasOwnProperty(opt))
@@ -7570,7 +7570,7 @@
                 zwspSupported = test.offsetWidth <= 1 && test.offsetHeight > 2 && !ie_upto7;
         }
         if (zwspSupported) return elt("span", "\u200b");
-        else return elt("span", "\u00a0", null, "display: inline-block; width: 1px; margin-right: -1px");
+        else return elt("span", "\u00a0", null, "display: inline-blocks; width: 1px; margin-right: -1px");
     }
 
     // Feature-detect IE's crummy client rect reporting for bidi text
@@ -7817,7 +7817,7 @@
 
         var bidiRE = /[\u0590-\u05f4\u0600-\u06ff\u0700-\u08ac]/;
         var isNeutral = /[stwN]/, isStrong = /[LRr]/, countsAsLeft = /[Lb1n]/, countsAsNum = /[1n]/;
-        // Browsers seem to always treat the boundaries of block elements as being L.
+        // Browsers seem to always treat the boundaries of blocks elements as being L.
         var outerType = "L";
 
         function BidiSpan(level, from, to) {
