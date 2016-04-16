@@ -14,15 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('test', function () {
-    return view('admin.user.edit');
-});
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController'
 ]);
 
-Route::group(['prefix' => 'admin'], function () {
+Route::auth();
+Route::get('/home', 'HomeController@index');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::group(['prefix' => 'cate'], function () {
         // Route CATEGORY
         Route::get('list', ['as' => 'admin.cate.getList', 'uses' => 'CateController@getList']);
@@ -66,3 +66,4 @@ Route::group(['prefix' => 'admin'], function () {
 
     });
 });
+
