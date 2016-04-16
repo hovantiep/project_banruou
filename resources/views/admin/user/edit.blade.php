@@ -7,7 +7,7 @@
         <form action="" method="POST">
             <div class="form-group">
                 <label>Username</label>
-                <input class="form-control" name="txtUser" value="{!! old('txtUser',$user->username) !!}" disabled/>
+                <input class="form-control" name="txtUsername" value="{!! old('txtUsername',$user->username) !!}" disabled/>
             </div>
             <div class="form-group">
                 <label>Password</label>

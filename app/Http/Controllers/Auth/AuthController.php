@@ -81,7 +81,7 @@ class AuthController extends Controller
         $login = array(
             'username' => $loginRequest->username,
             'password' => $loginRequest->password,
-            'level' => 0
+//            'level' => 0 // Chỉ cho superadmin đăng nhập
         );
         if (\Auth::attempt($login)) {
             return redirect()->route('admin.cate.getList');

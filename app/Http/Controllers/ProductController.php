@@ -38,7 +38,7 @@ class ProductController extends Controller
 
         $product->keywords = $productRequest->txtKeywords;
         $product->description = $productRequest->txtDescription;
-        $product->user_id = 1;
+        $product->user_id = \Auth::user()->id;
         $product->cate_id = $productRequest->sltCate;
         $product->save();
 
@@ -124,7 +124,7 @@ class ProductController extends Controller
 
         $product->keywords = Request::input('txtKeywords');
         $product->description = Request::input('txtDescription');
-        $product->user_id = 1;
+        $product->user_id = \Auth::user()->id;
         $product->cate_id = Request::input('sltCate');
         $product->save();
 
