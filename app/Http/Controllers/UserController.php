@@ -54,22 +54,40 @@ class UserController extends Controller
 
     public function getEdit($id)
     {
+        // Cấm:
+        // 1. admin thường sửa super
+        // 2. admin thường sửa admin không là của chính mình
+        // 3. member
+        // 4. super sửa của người khác mình
+        // => super admin sửa hết, admin sửa của mình, member không được sửa, cùng cấp không sửa được
         $user = User::find($id);
-        return view('admin.user.edit')
-            ->with('user', $user);
+        $current_user = \Auth::user();
+        if (($current_user->level == 1 && $user->level == 0) ||
+            ($current_user->level == 1 && $current_user->id != $user->id && $user->level == 1) ||
+            ($current_user->level == 2) ||
+            ($current_user->level == 0 && $current_user->id != $user->id)
+        ) {
+            return redirect()->route('admin.user.getList')
+                ->with(['level' => 'danger', 'flash_message' => 'Bạn không có quyền sửa user này!']);
+        } else {
+            return view('admin.user.edit')
+                ->with('user', $user);
+        }
+
     }
 
     public function postEdit($id, Request $request)
     {
+
         $user = User::find($id);
-        if($request->input('txtPass')){
+        if ($request->input('txtPass')) {
             $this->validate($request,
                 [
                     'txtRePass' => 'required|same:txtPass',
                 ],
                 [
-                    'txtRePass.required'=>'Chưa xác nhận mật khẩu',
-                    'txtRePass.same'=>'Xác nhận mật khẩu sai',
+                    'txtRePass.required' => 'Chưa xác nhận mật khẩu',
+                    'txtRePass.same' => 'Xác nhận mật khẩu sai',
                 ]);
             $user->password = Hash::make($request->input('txtPass'));
         }
@@ -78,8 +96,8 @@ class UserController extends Controller
                 'txtEmail' => 'required|email'
             ],
             [
-                'txtEmail.required'=>'Chưa điền email',
-                'txtEmail.email'=>'Đây không phải là email',
+                'txtEmail.required' => 'Chưa điền email',
+                'txtEmail.email' => 'Đây không phải là email',
             ]);
         $user->email = $request->txtEmail;
         $user->level = $request->rdoLevel;
