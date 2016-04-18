@@ -16,9 +16,7 @@ Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController'
 ]);
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
@@ -66,7 +64,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 });
 
-Route::get('test',function(){
-   return view('user.pages.shopping-cart');
+Route::get('test', function () {
+    return view('user.pages.shopping-cart');
 });
 
