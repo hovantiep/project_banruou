@@ -64,7 +64,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 });
 
-Route::get('test', function () {
-    return view('user.pages.shopping-cart');
-});
+Route::get('loai-san-pham/{id}/{alias}',['as'=>'loaiSanPham','uses'=>'HomeController@loaiSanPham']);
+
 
