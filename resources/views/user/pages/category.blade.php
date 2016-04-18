@@ -18,21 +18,11 @@
                     <div class="sidewidt">
                         <h2 class="heading2"><span>Categories</span></h2>
                         <ul class="nav nav-list categories">
-                            <li>
-                                <a href="category.html">Men Accessories</a>
-                            </li>
-                            <li>
-                                <a href="category.html">Women Accessories</a>
-                            </li>
-                            <li>
-                                <a href="category.html">Computers </a>
-                            </li>
-                            <li>
-                                <a href="category.html">Home and Furniture</a>
-                            </li>
-                            <li>
-                                <a href="category.html">Others</a>
-                            </li>
+                            @foreach($menuCate as $item)
+                                <li>
+                                    <a href="{{ route('loaiSanPham',[$item->id,$item->alias]) }}">{!! $item->name !!}</a>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!--  Best Seller -->
@@ -63,24 +53,14 @@
                     <div class="sidewidt">
                         <h2 class="heading2"><span>Latest Products</span></h2>
                         <ul class="bestseller">
+                            @foreach($latestProduct as $item)
                             <li>
-                                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                                <a class="productname" href="product.html"> Product Name</a>
-                                <span class="procategory">Women Accessories</span>
-                                <span class="price">$250</span>
+                                <img width="50" height="50" src="{!! url('resources/upload/'.$item->image) !!}" alt="product" title="product">
+                                <a class="productname" href="product.html"> {!! $item->name !!}</a>
+                                <span class="procategory">{!! $nameCate->name !!}</span>
+                                <span class="price">{!! number_format($item->price,0,',','.') !!}</span>
                             </li>
-                            <li>
-                                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                                <a class="productname" href="product.html"> Product Name</a>
-                                <span class="procategory">Electronics</span>
-                                <span class="price">$250</span>
-                            </li>
-                            <li>
-                                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                                <a class="productname" href="product.html"> Product Name</a>
-                                <span class="procategory">Electronics</span>
-                                <span class="price">$250</span>
-                            </li>
+                                @endforeach
                         </ul>
                     </div>
                     <!--  Must have -->
