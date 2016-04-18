@@ -1,7 +1,13 @@
 @extends('user.master')
 @section('description','Đây là trang chủ')
 @section('content')
-        <!-- Featured Product-->
+        <!-- Slider Start-->
+@include('user.blocks.slider')
+        <!-- Slider End-->
+<!-- Section Start-->
+@include('user.blocks.otherdetail')
+        <!-- Section End-->
+<!-- Featured Product-->
 <section id="featured" class="row mt40">
     <div class="container">
         <h1 class="heading1"><span class="maintext">Featured Products</span><span class="subtext"> See Our Most featured Products</span>

@@ -32,12 +32,7 @@
 </header>
 <!-- Header End -->
 <div id="maincontainer">
-    <!-- Slider Start-->
-    @include('user.blocks.slider')
-            <!-- Slider End-->
-    <!-- Section Start-->
-    @include('user.blocks.otherdetail')
-            <!-- Section End-->
+
     @yield('content')
 </div>
 <!-- Footer -->
