@@ -43,11 +43,11 @@
         <ul class="thumbnails">
             @foreach($latestProduct as $item)
                 <li class="span3">
-                    <a class="prdocutname" href="">{!! $item->name !!}</a>
+                    <a class="prdocutname" href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}">{!! $item->name !!}</a>
 
                     <div class="thumbnail">
                         <span class="new tooltip-test">New</span>
-                        <a href="#"><img alt="" src="{!! asset('resources/upload/'.$item->image) !!}"></a>
+                        <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img alt="" src="{!! asset('resources/upload/'.$item->image) !!}"></a>
 
                         <div class="pricetag">
                             <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>

@@ -54,13 +54,14 @@
                         <h2 class="heading2"><span>Latest Products</span></h2>
                         <ul class="bestseller">
                             @foreach($latestProduct as $item)
-                            <li>
-                                <img width="50" height="50" src="{!! url('resources/upload/'.$item->image) !!}" alt="product" title="product">
-                                <a class="productname" href="product.html"> {!! $item->name !!}</a>
-                                <span class="procategory">{!! $nameCate->name !!}</span>
-                                <span class="price">{!! number_format($item->price,0,',','.') !!}</span>
-                            </li>
-                                @endforeach
+                                <li>
+                                    <img width="50" height="50" src="{!! url('resources/upload/'.$item->image) !!}"
+                                         alt="product" title="product">
+                                    <a class="productname" href="product.html"> {!! $item->name !!}</a>
+                                    <span class="procategory">{!! $nameCate->name !!}</span>
+                                    <span class="price">{!! number_format($item->price,0,',','.') !!}</span>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!--  Must have -->
@@ -69,12 +70,12 @@
 
                         <div class="flexslider" id="mainslider">
                             <ul class="slides">
-                                <li>
-                                    <img src="img/product1.jpg" alt=""/>
-                                </li>
-                                <li>
-                                    <img src="img/product2.jpg" alt=""/>
-                                </li>
+                                @foreach($mustHave as $item)
+                                    <li>
+                                        <img src="{!! url('resources/upload/'.$item->image) !!}"
+                                             alt="{!! $item->name !!}"/>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -91,12 +92,14 @@
                                     <ul class="thumbnails grid">
                                         @foreach($productCates as $item)
                                             <li class="span3">
-                                                <a class="prdocutname" href="#">{!! $item->name !!}</a>
+                                                <a class="prdocutname"
+                                                   href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}">{!! $item->name !!}</a>
 
                                                 <div class="thumbnail">
                                                     <span class="sale tooltip-test">Sale</span>
-                                                    <a href="#"><img alt=""
-                                                                     src="{!! url('resources/upload/'.$item->image) !!}"></a>
+                                                    <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img
+                                                                alt=""
+                                                                src="{!! url('resources/upload/'.$item->image) !!}"></a>
 
                                                     <div class="pricetag">
                                                         <span class="spiral"></span><a href="#" class="productcart">ADD
@@ -113,19 +116,21 @@
                                     </ul>
                                     <div class="pagination pull-right">
                                         <ul>
-                                            <li><a href="#">Prev</a>
-                                            </li>
-                                            <li class="active">
-                                                <a href="#">1</a>
-                                            </li>
-                                            <li><a href="#">2</a>
-                                            </li>
-                                            <li><a href="#">3</a>
-                                            </li>
-                                            <li><a href="#">4</a>
-                                            </li>
-                                            <li><a href="#">Next</a>
-                                            </li>
+                                            @if($productCates->currentPage()!=1)
+                                                <li>
+                                                    <a href="{!! $productCates->url($productCates->currentPage()-1) !!}">Prev</a>
+                                                </li>
+                                            @endif
+                                            @for($i=1;$i<=$productCates->lastPage();$i++)
+                                                <li {!! ($productCates->currentPage()==$i) ? 'class="active"' : null !!}>
+                                                    <a href="{{ $productCates->url($i) }}">{{ $i }}</a>
+                                                </li>
+                                            @endfor
+                                            @if($productCates->currentPage()!=$productCates->lastPage())
+                                                <li>
+                                                    <a href="{!! $productCates->url($productCates->currentPage()+1) !!}">Next</a>
+                                                </li>
+                                            @endif
                                         </ul>
                                     </div>
                                 </section>
