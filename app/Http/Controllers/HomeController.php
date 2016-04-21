@@ -6,6 +6,8 @@ use App\Cate;
 use App\Http\Requests;
 use App\Product;
 use Illuminate\Support\Facades\DB;
+use Mail;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -69,5 +71,21 @@ class HomeController extends Controller
             ->with('product', $product)
             ->with('related',$related)
             ->with('imageDetail',$imageDetail);
+    }
+
+    public function getLienHe(){
+        return view('user.pages.contact');
+    }
+
+    public function postLienHe(Request $request){
+        $data = ['hoten'=>$request->name,'mail'=>$request->email,'noidung'=>$request->message];
+        Mail::send('auth.emails.myEmail',$data, function($msg){
+            $msg->from('hero.tiep.88@gmail.com','Tiep');
+            $msg->to('hovantiep1989@gmail.com','admin website')->subject('Project Laravel 5x');
+        });
+        echo '<script>
+        alert("Cảm ơn bạn đã góp ý, chúng tôi sẽ liên hệ bạn trong thời gian sớm nhất!");
+        window.location = "'.url('/').'"';
+        echo "</script>";
     }
 }
