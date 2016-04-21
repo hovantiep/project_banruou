@@ -15,7 +15,8 @@
       <h1 class="heading1"><span class="maintext">Contact</span><span class="subtext"> Contact Us for more</span></h1>
       <div class="row">
         <div class="span9">
-          <form class="form-horizontal contactform"  method="post">
+          <form class="form-horizontal"  method="post">
+          <input type="hidden" name="_token" value="{!! csrf_token() !!}">
             <fieldset>
               <div class="control-group">
                 <label for="name" class="control-label">Name <span class="required">*</span></label>
@@ -30,15 +31,9 @@
                 </div>
               </div>
               <div class="control-group">
-                <label for="url" class="control-label">Url</label>
-                <div class="controls">
-                  <input type="url" id="url" value="" name="url">
-                </div>
-              </div>
-              <div class="control-group">
                 <label for="message" class="control-label">Message</label>
                 <div class="controls">
-                  <textarea  class="required" rows="6" cols="40" id="message" name="messagee"></textarea>
+                  <textarea  class="required" rows="6" cols="40" id="message" name="message"></textarea>
                 </div>
               </div>
               <div class="form-actions">
