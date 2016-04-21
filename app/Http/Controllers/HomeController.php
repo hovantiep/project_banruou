@@ -117,9 +117,7 @@ class HomeController extends Controller
 
     public function capNhatHang($rowId, $qty)
     {
-        Cart::update($rowId, ['qty' => $qty]);
-        $data = Cart::get($rowId);
-
-        return $data->subtotal;
+        Cart::update($rowId, ['qty'=>$qty]);
+        echo 'OK';
     }
 }

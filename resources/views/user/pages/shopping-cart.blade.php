@@ -70,7 +70,7 @@
                             <table class="table table-striped table-bordered ">
                                 <tr>
                                     <td><span class="extra bold">Sub-Total :</span></td>
-                                    <td><span class="bold">{!! number_format($total,0,',','.') !!}</span></td>
+                                    <td><span class="bold ">{!! number_format($total,0,',','.') !!}</span></td>
                                 </tr>
                                 <tr>
                                     <td><span class="extra bold">VAT (10%) :</span></td>
