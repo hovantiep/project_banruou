@@ -35,7 +35,7 @@ $(document).ready(function () {
  */
 $(document).ready(function () {
     $('a#del_img').on('click', function () {
-        var url = 'http://project_laravel.local/admin/product/delImg/';
+        var url = document.location.origin + '/admin/product/delImg/';
         var _token = $("form[name=frmEditProduct]").find('input[name=_token]').attr('value');
         var src = $(this).parent().find('img').attr('src');
         var idImg = $(this).parent().find('img').attr('id');

@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Cate;
 use App\Http\Requests;
 use App\Product;
+use Cart;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Mail;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -63,29 +64,62 @@ class HomeController extends Controller
         $product = Product::find($id);
 
         $cate = $product->cate_id;
-        $related = Product::select('id','name','image','price','alias')->where('cate_id',$cate)->orderBy(DB::raw('RAND()'))->take(4)->get();
+        $related = Product::select('id', 'name', 'image', 'price', 'alias')->where('cate_id', $cate)->orderBy(DB::raw('RAND()'))->take(4)->get();
 
         $imageDetail = $product->productImage;
 
         return view('user.pages.product')
             ->with('product', $product)
-            ->with('related',$related)
-            ->with('imageDetail',$imageDetail);
+            ->with('related', $related)
+            ->with('imageDetail', $imageDetail);
     }
 
-    public function getLienHe(){
+    public function getLienHe()
+    {
         return view('user.pages.contact');
     }
 
-    public function postLienHe(Request $request){
-        $data = ['hoten'=>$request->name,'mail'=>$request->email,'noidung'=>$request->message];
-        Mail::send('auth.emails.myEmail',$data, function($msg){
-            $msg->from('hero.tiep.88@gmail.com','Tiep');
-            $msg->to('hovantiep1989@gmail.com','admin website')->subject('Project Laravel 5x');
+    public function postLienHe(Request $request)
+    {
+        $data = ['hoten' => $request->name, 'mail' => $request->email, 'noidung' => $request->message];
+        Mail::send('auth.emails.myEmail', $data, function ($msg) {
+            $msg->from('hero.tiep.88@gmail.com', 'Tiep');
+            $msg->to('hovantiep1989@gmail.com', 'admin website')->subject('Project Laravel 5x');
         });
         echo '<script>
         alert("Cảm ơn bạn đã góp ý, chúng tôi sẽ liên hệ bạn trong thời gian sớm nhất!");
-        window.location = "'.url('/').'"';
+        window.location = "' . url('/') . '"';
         echo "</script>";
+    }
+
+    public function muaHang($id)
+    {
+        $productBuy = Product::find($id);
+        Cart::add(['id' => $id, 'name' => $productBuy->name, 'qty' => 1, 'price' => $productBuy->price, 'options' => ['img' => $productBuy->image]]);
+
+        return redirect()->route('gioHang');
+    }
+
+    public function gioHang()
+    {
+        $data = Cart::content();
+        $total = Cart::total();
+        return view('user.pages.shopping-cart')
+            ->with('data', $data)
+            ->with('total', $total);
+    }
+
+    public function xoaHangMua($rowId)
+    {
+        Cart::remove($rowId);
+        return redirect()->route('gioHang');
+    }
+
+    public function capNhatHang($rowId, $qty)
+    {
+        Cart::update($rowId, ['qty' => $qty]);
+        $data = Cart::get($rowId);
+
+        return $data->subtotal;
     }
 }

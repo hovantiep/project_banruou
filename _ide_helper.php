@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.29 on 2016-04-12.
+ * Generated for Laravel 5.2.30 on 2016-04-21.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1122,6 +1122,18 @@ namespace {
         public static function terminate($input, $status){
             //Method inherited from \Illuminate\Foundation\Console\Kernel            
             \App\Console\Kernel::terminate($input, $status);
+        }
+        
+        /**
+         * Register the given command with the console application.
+         *
+         * @param \Symfony\Component\Console\Command\Command $command
+         * @return void 
+         * @static 
+         */
+        public static function registerCommand($command){
+            //Method inherited from \Illuminate\Foundation\Console\Kernel            
+            \App\Console\Kernel::registerCommand($command);
         }
         
         /**
@@ -3402,7 +3414,7 @@ namespace {
         }
         
         /**
-         * Find a model by its primary key.
+         * Find multiple models by their primary keys.
          *
          * @param array $ids
          * @param array $columns
@@ -4013,11 +4025,14 @@ namespace {
          * Add a "cross join" clause to the query.
          *
          * @param string $table
+         * @param string $first
+         * @param string $operator
+         * @param string $second
          * @return \Illuminate\Database\Query\Builder|static 
          * @static 
          */
-        public static function crossJoin($table){
-            return \Illuminate\Database\Query\Builder::crossJoin($table);
+        public static function crossJoin($table, $first = null, $operator = null, $second = null){
+            return \Illuminate\Database\Query\Builder::crossJoin($table, $first, $operator, $second);
         }
         
         /**
@@ -5878,26 +5893,12 @@ namespace {
     class Log extends \Illuminate\Support\Facades\Log{
         
         /**
-         * Log a message to the logs.
-         *
-         * @param string $level
-         * @param string $message
-         * @param array $context
-         * @return void
-         * @static
-         */
-        public static function log($level, $message, $context = array())
-        {
-            \Illuminate\Log\Writer::log($level, $message, $context);
-        }
-
-        /**
          * Adds a log record at the DEBUG level.
          *
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function debug($message, $context = array()){
             return \Monolog\Logger::debug($message, $context);
@@ -5909,7 +5910,7 @@ namespace {
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function info($message, $context = array()){
             return \Monolog\Logger::info($message, $context);
@@ -5921,7 +5922,7 @@ namespace {
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function notice($message, $context = array()){
             return \Monolog\Logger::notice($message, $context);
@@ -5933,7 +5934,7 @@ namespace {
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function warning($message, $context = array()){
             return \Monolog\Logger::warning($message, $context);
@@ -5945,7 +5946,7 @@ namespace {
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function error($message, $context = array()){
             return \Monolog\Logger::error($message, $context);
@@ -5957,7 +5958,7 @@ namespace {
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function critical($message, $context = array()){
             return \Monolog\Logger::critical($message, $context);
@@ -5969,7 +5970,7 @@ namespace {
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function alert($message, $context = array()){
             return \Monolog\Logger::alert($message, $context);
@@ -5981,10 +5982,23 @@ namespace {
          * @param string $message The log message
          * @param array $context The log context
          * @return Boolean Whether the record has been processed
-         * @static
+         * @static 
          */
         public static function emergency($message, $context = array()){
             return \Monolog\Logger::emergency($message, $context);
+        }
+        
+        /**
+         * Log a message to the logs.
+         *
+         * @param string $level
+         * @param string $message
+         * @param array $context
+         * @return void 
+         * @static 
+         */
+        public static function log($level, $message, $context = array()){
+            \Illuminate\Log\Writer::log($level, $message, $context);
         }
         
         /**
@@ -7034,6 +7048,17 @@ namespace {
          */
         public static function except($keys){
             return \Illuminate\Http\Request::except($keys);
+        }
+        
+        /**
+         * Intersect an array of items with the input data.
+         *
+         * @param array|mixed $keys
+         * @return array 
+         * @static 
+         */
+        public static function intersect($keys){
+            return \Illuminate\Http\Request::intersect($keys);
         }
         
         /**
@@ -9063,7 +9088,7 @@ namespace {
         }
         
         /**
-         * Alias for the "currentRouteNamed" method.
+         * Alias for the "currentRouteName" method.
          *
          * @param mixed  string
          * @return bool 
@@ -10857,6 +10882,134 @@ namespace {
          */
         public static function getNames(){
             return \Illuminate\View\Factory::getNames();
+        }
+        
+    }
+
+
+    class Cart extends \Gloudemans\Shoppingcart\Facades\Cart{
+        
+        /**
+         * Set the current cart instance
+         *
+         * @param string $instance Cart instance name
+         * @return \Gloudemans\Shoppingcart\Gloudemans\Shoppingcart\Cart 
+         * @static 
+         */
+        public static function instance($instance = null){
+            return \Gloudemans\Shoppingcart\Cart::instance($instance);
+        }
+        
+        /**
+         * Set the associated model
+         *
+         * @param string $modelName The name of the model
+         * @param string $modelNamespace The namespace of the model
+         * @return void 
+         * @static 
+         */
+        public static function associate($modelName, $modelNamespace = null){
+            \Gloudemans\Shoppingcart\Cart::associate($modelName, $modelNamespace);
+        }
+        
+        /**
+         * Add a row to the cart
+         *
+         * @param string|array $id Unique ID of the item|Item formated as array|Array of items
+         * @param string $name Name of the item
+         * @param int $qty Item qty to add to the cart
+         * @param float $price Price of one item
+         * @param array $options Array of additional options, such as 'size' or 'color'
+         * @static 
+         */
+        public static function add($id, $name = null, $qty = null, $price = null, $options = array()){
+            return \Gloudemans\Shoppingcart\Cart::add($id, $name, $qty, $price, $options);
+        }
+        
+        /**
+         * Update the quantity of one row of the cart
+         *
+         * @param string $rowId The rowid of the item you want to update
+         * @param integer|array $attribute New quantity of the item|Array of attributes to update
+         * @return boolean 
+         * @static 
+         */
+        public static function update($rowId, $attribute){
+            return \Gloudemans\Shoppingcart\Cart::update($rowId, $attribute);
+        }
+        
+        /**
+         * Remove a row from the cart
+         *
+         * @param string $rowId The rowid of the item
+         * @return boolean 
+         * @static 
+         */
+        public static function remove($rowId){
+            return \Gloudemans\Shoppingcart\Cart::remove($rowId);
+        }
+        
+        /**
+         * Get a row of the cart by its ID
+         *
+         * @param string $rowId The ID of the row to fetch
+         * @return \Gloudemans\Shoppingcart\Gloudemans\Shoppingcart\CartCollection 
+         * @static 
+         */
+        public static function get($rowId){
+            return \Gloudemans\Shoppingcart\Cart::get($rowId);
+        }
+        
+        /**
+         * Get the cart content
+         *
+         * @return \Gloudemans\Shoppingcart\Gloudemans\Shoppingcart\CartRowCollection 
+         * @static 
+         */
+        public static function content(){
+            return \Gloudemans\Shoppingcart\Cart::content();
+        }
+        
+        /**
+         * Empty the cart
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function destroy(){
+            return \Gloudemans\Shoppingcart\Cart::destroy();
+        }
+        
+        /**
+         * Get the price total
+         *
+         * @return float 
+         * @static 
+         */
+        public static function total(){
+            return \Gloudemans\Shoppingcart\Cart::total();
+        }
+        
+        /**
+         * Get the number of items in the cart
+         *
+         * @param boolean $totalItems Get all the items (when false, will return the number of rows)
+         * @return int 
+         * @static 
+         */
+        public static function count($totalItems = true){
+            return \Gloudemans\Shoppingcart\Cart::count($totalItems);
+        }
+        
+        /**
+         * Search if the cart has a item
+         *
+         * @param array $search An array with the item ID and optional options
+         * @return array|boolean 
+         * @static 
+         */
+        public static function search($search){
+            return \Gloudemans\Shoppingcart\Cart::search($search);
         }
         
     }

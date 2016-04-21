@@ -22,7 +22,7 @@
                         <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img alt="" src="{!! url('resources/upload/'.$item->image) !!}"></a>
 
                         <div class="pricetag">
-                            <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
+                            <span class="spiral"></span><a href="{!! route('muaHang',[$item->id,$item->alias]) !!}" class="productcart">ADD TO CART</a>
 
                             <div class="price">
                                 <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
@@ -50,10 +50,10 @@
                         <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img alt="" src="{!! asset('resources/upload/'.$item->image) !!}"></a>
 
                         <div class="pricetag">
-                            <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
+                            <span class="spiral"></span><a href="{!! route('muaHang',[$item->id,$item->alias]) !!}" class="productcart">ADD TO CART</a>
 
                             <div class="price">
-                                <div class="pricenew">{!! $item->price !!}</div>
+                                <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
                                 <div class="priceold"></div>
                             </div>
                         </div>

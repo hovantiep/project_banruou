@@ -66,6 +66,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
 Route::get('loai-san-pham/{id}/{alias}',['as'=>'loaiSanPham','uses'=>'HomeController@loaiSanPham']);
 Route::get('chi-tiet-san-pham/{id}/{alias}',['as'=>'chiTietSanPham','uses'=>'HomeController@chiTietSanPham']);
+
 Route::get('lien-he',['as'=>'getLienHe','uses'=>'HomeController@getLienHe']);
 Route::post('lien-he',['as'=>'postLienHe','uses'=>'HomeController@postLienHe']);
+
+Route::get('mua-hang/{id}/{alias}',['as'=>'muaHang','uses'=>'HomeController@muaHang']);
+Route::get('gio-hang',['as'=>'gioHang','uses'=>'HomeController@gioHang']);
+Route::get('xoa-hang-mua/{rowid}',['as'=>'xoaHangMua','uses'=>'HomeController@xoaHangMua']);
+Route::post('cap-nhat-hang/{rowid}/{qty}',['as'=>'capNhatHang','uses'=>'HomeController@capNhatHang']);
 
