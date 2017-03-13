@@ -44,7 +44,7 @@ $(document).ready(function () {
         // var url = base_url + '/' + pathArray[1] + '/' + pathArray[2] + '/admin/product/delImg/';
         //
         var full_url = window.location.href;
-        var url = full_url.replace(/edit\/\d/,'delImg/');
+        var url = full_url.replace(/[a-z]*\/\d/,'delImg/');
 
         var _token = $("form[name=frmEditProduct]").find('input[name=_token]').attr('value');
         var src = $(this).parent().find('img').attr('src');
