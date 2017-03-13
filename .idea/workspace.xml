@@ -384,7 +384,7 @@
       <workItem from="1489383873607" duration="4624000" />
       <workItem from="1489392075666" duration="1869000" />
       <workItem from="1489394036025" duration="5911000" />
-      <workItem from="1489404534879" duration="943000" />
+      <workItem from="1489404534879" duration="947000" />
     </task>
     <task id="LOCAL-00001" summary="Finished add &amp; delete">
       <created>1460459442142</created>
@@ -673,11 +673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489405479899</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="chinh sua lai file ajax">
+      <created>1489405484788</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1489405484788</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16715000" />
+    <option name="totallyTimeSpent" value="16719000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
