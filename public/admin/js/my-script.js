@@ -35,7 +35,14 @@ $(document).ready(function () {
  */
 $(document).ready(function () {
     $('a#del_img').on('click', function () {
-        var url = document.location.origin + '/admin/product/delImg/';
+
+        // var host = window.location.host;  // Lay host
+        var base_url = window.location.origin; // Lay duong dan
+        var pathArray = window.location.pathname.split( '/' ); // Lay duong dan thu muc den file
+
+        // var url = document.location.origin + '/admin/product/delImg/'; // Truong hop sai duong dan thi dung
+        var url = base_url + '/' + pathArray[1] + '/' + pathArray[2] + '/admin/product/delImg/';
+
         var _token = $("form[name=frmEditProduct]").find('input[name=_token]').attr('value');
         var src = $(this).parent().find('img').attr('src');
         var idImg = $(this).parent().find('img').attr('id');

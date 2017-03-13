@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace project1;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +11,6 @@ class Cate extends Model
     protected $fillable = ['name', 'alias', 'order', 'parent_id', 'keywords', 'description'];
 
     public function product(){
-    	return $this->hasMany('App\Product','cate_id');
+    	return $this->hasMany('project1\Product','cate_id');
     }
 }

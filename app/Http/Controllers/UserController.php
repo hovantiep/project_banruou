@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace project1\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Requests\UserRequest;
-use App\User;
+use project1\Http\Requests;
+use project1\Http\Requests\UserRequest;
+use project1\User;
 use Hash;
 use Illuminate\Http\Request;
 

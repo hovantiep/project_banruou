@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace project1\Http\Controllers;
 
-use App\Cate;
-use App\Http\Requests;
-use App\Http\Requests\ProductRequest;
-use App\Product;
-use App\ProductImage;
+use project1\Cate;
+use project1\Http\Requests;
+use project1\Http\Requests\ProductRequest;
+use project1\Product;
+use project1\ProductImage;
 use Request;
 
 //use Illuminate\Http\Request; // Tắt nếu sử dụng ajax
@@ -99,7 +99,7 @@ class ProductController extends Controller
             ->with('productImages', $productImages);
     }
 
-    public function postEdit($id, Request $request)
+    public function postEdit($id )//, Request $request)
     {
         $product = Product::find($id);
         $product->name = Request::input('txtName');
@@ -108,8 +108,8 @@ class ProductController extends Controller
         $product->intro = Request::input('txtIntro');
         $product->content = Request::input('txtContent');
 
-        if (!empty(Request::file('fImages'))) {
 //      Có thay đổi file hình
+        if (!empty(Request::file('fImages'))) {
             $file = Request::file('fImages');
             $file_name = $file->getClientOriginalName();
             $file->move('resources/upload/', $file_name);

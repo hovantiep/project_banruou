@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace project1;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +11,6 @@ class ProductImage extends Model
     protected $fillable = ['id', 'image', 'product_id'];
 
     public function product(){
-    	return $this->belongsTo('App\Product','product_id');
+    	return $this->belongsTo('project1\Product','product_id');
     }
 }

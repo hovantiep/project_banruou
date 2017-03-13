@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace project1\Http\Requests;
 class CateRequest extends Request
 {
     /**

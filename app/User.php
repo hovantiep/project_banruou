@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace project1;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -21,6 +21,6 @@ class User extends Authenticatable
     protected $hidden = ['password', 'remember_token'];
 
     public function product(){
-        return $this->hasMany('App\Product','user_id');
+        return $this->hasMany('project1\Product','user_id');
     }
 }

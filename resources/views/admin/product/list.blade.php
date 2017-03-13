@@ -22,7 +22,7 @@
                 <td>{!! $prod->name !!}</td>
                 <td align="right">{!! number_format($prod->price,0,',','.') !!} VNĐ</td>
                 <td>{!! Carbon\Carbon::createFromTimestamp(strtotime($prod->created_at))->diffForHumans() !!}</td>
-                <td>{{ \App\Product::find($prod->id)->cate->name }}</td>
+                <td>{{ \project1\Product::find($prod->id)->cate->name }}</td>
                 <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a
                             onclick="return confirmDel('Bạn có chắc chắn xóa')"
                             href="{!! route('admin.product.getDelete',$prod->id) !!}"> Delete</a></td>

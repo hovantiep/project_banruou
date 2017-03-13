@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace project1\Http\Controllers;
 
-use App\Cate;
-use App\Http\Requests\CateRequest;
+use project1\Cate;
+use project1\Http\Requests\CateRequest;
 use Illuminate\Http\Request;
 
 class CateController extends Controller
@@ -48,8 +48,6 @@ class CateController extends Controller
             return redirect()->route('admin.cate.getList')
                 ->with(['level' => 'success', 'flash_message' => 'Xóa thành công!']);
         }
-
-
     }
 
     public function getEdit($id)

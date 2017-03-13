@@ -19,6 +19,7 @@ Route::controllers([
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
 
+// Định tuyến cho phần backend
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::group(['prefix' => 'cate'], function () {
         // Route CATEGORY
@@ -64,6 +65,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 });
 
+// Định tuyến cho phần frontend
 Route::get('loai-san-pham/{id}/{alias}',['as'=>'loaiSanPham','uses'=>'HomeController@loaiSanPham']);
 Route::get('chi-tiet-san-pham/{id}/{alias}',['as'=>'chiTietSanPham','uses'=>'HomeController@chiTietSanPham']);
 

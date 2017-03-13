@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace project1\Http\Controllers;
 
-use App\Cate;
-use App\Http\Requests;
-use App\Product;
+use project1\Cate;
+use project1\Http\Requests;
+use project1\Product;
 use Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
