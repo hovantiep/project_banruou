@@ -16,8 +16,12 @@ Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController'
 ]);
-Route::get('/', 'HomeController@index');
-Route::get('/home', 'HomeController@index');
+
+    Route::get('/', 'HomeController@index');
+    Route::get('/home', 'HomeController@index');//->middleware("verify");
+    Route::post('/home', 'HomeController@index');
+
+
 
 // Định tuyến cho phần backend
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {

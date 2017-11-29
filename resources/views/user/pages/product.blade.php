@@ -110,6 +110,10 @@
             </div>
         </div>
     </section>
+    <section>
+        <h4> plugin facebook</h4>
+        <div class="fb-comments" data-href="http://localhost/project_laravel/chi-tiet-san-pham/1/ao-thun" data-numposts="5"></div>
+    </section>
     <!--  Related Products-->
     <section id="related" class="row">
         <div class="container">
