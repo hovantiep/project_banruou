@@ -17,13 +17,10 @@ Route::controllers([
     'password' => 'Auth\PasswordController'
 ]);
 
-    Route::get('/', 'HomeController@index');
-    Route::get('/home', 'HomeController@index');//->middleware("verify");
-    Route::post('/home', 'HomeController@index');
-
 
 
 // Định tuyến cho phần backend
+//Route::get('admin', ['as' => 'Admin', 'uses'=>''])
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::group(['prefix' => 'cate'], function () {
         // Route CATEGORY
@@ -69,15 +66,22 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 });
 
+
+
 // Định tuyến cho phần frontend
-Route::get('loai-san-pham/{id}/{alias}',['as'=>'loaiSanPham','uses'=>'HomeController@loaiSanPham']);
-Route::get('chi-tiet-san-pham/{id}/{alias}',['as'=>'chiTietSanPham','uses'=>'HomeController@chiTietSanPham']);
 
-Route::get('lien-he',['as'=>'getLienHe','uses'=>'HomeController@getLienHe']);
-Route::post('lien-he',['as'=>'postLienHe','uses'=>'HomeController@postLienHe']);
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');//->middleware("verify");
+Route::post('/home', 'HomeController@index');
 
-Route::get('mua-hang/{id}/{alias}',['as'=>'muaHang','uses'=>'HomeController@muaHang']);
-Route::get('gio-hang',['as'=>'gioHang','uses'=>'HomeController@gioHang']);
-Route::get('xoa-hang-mua/{rowid}',['as'=>'xoaHangMua','uses'=>'HomeController@xoaHangMua']);
-Route::post('cap-nhat-hang/{rowid}/{qty}',['as'=>'capNhatHang','uses'=>'HomeController@capNhatHang']);
+Route::get('loai-san-pham/{id}/{alias}', ['as' => 'loaiSanPham', 'uses' => 'HomeController@loaiSanPham']);
+Route::get('chi-tiet-san-pham/{id}/{alias}', ['as' => 'chiTietSanPham', 'uses' => 'HomeController@chiTietSanPham']);
+
+Route::get('lien-he', ['as' => 'getLienHe', 'uses' => 'HomeController@getLienHe']);
+Route::post('lien-he', ['as' => 'postLienHe', 'uses' => 'HomeController@postLienHe']);
+
+Route::get('mua-hang/{id}/{alias}', ['as' => 'muaHang', 'uses' => 'HomeController@muaHang']);
+Route::get('gio-hang', ['as' => 'gioHang', 'uses' => 'HomeController@gioHang']);
+Route::get('xoa-hang-mua/{rowid}', ['as' => 'xoaHangMua', 'uses' => 'HomeController@xoaHangMua']);
+Route::post('cap-nhat-hang/{rowid}/{qty}', ['as' => 'capNhatHang', 'uses' => 'HomeController@capNhatHang']);
 
