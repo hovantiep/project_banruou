@@ -12,7 +12,7 @@
                         @foreach($imageDetail as $item)
                             <li class="span5">
                                 <a  rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4" class="thumbnail cloud-zoom" href="{!! url('resources/upload/detail/'.$item->image) !!}">
-                                    <img src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="" title="">
+                                    <img src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="hinh anh chi tiet sp" title="dsfdsfs">
                                 </a>
                             </li>
                         @endforeach

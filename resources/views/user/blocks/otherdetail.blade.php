@@ -1,7 +1,7 @@
 <section class="container otherddetails">
     <div class="otherddetailspart">
         <div class="innerclass free">
-            <h2>Free shipping</h2>
+            <h2>Miễn phí giao hàng</h2>
             All over in world over $200
         </div>
     </div>

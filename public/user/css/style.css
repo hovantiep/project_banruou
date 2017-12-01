@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 /* ------------ Reset ------------ */
-body { font-family: 'Open Sans', sans-serif; color:#96979d; font-size:13px; margin:0px; padding:0px }
+body { font-family: 'Open Sans', sans-serif; color:#96979d; font-size:13px; margin:0px; padding:0px; background: #f8f8f8;}
 a { color :#96979d; text-decoration:none }
 a:hover { text-decoration:none; color:#F25C27 }
 h1, h2, h3, h4, h5 { font-weight:normal }
@@ -35,7 +35,7 @@ h2 {font-size:24px}
 
 input:focus:invalid, textarea:focus:invalid, select:focus:invalid { color: #96979d; }
 /* ------------ Header ------------ */
-.headerstrip { height:72px; background:#f25c27 }
+.headerstrip { height:72px; background:#390023 }
 .logo { width:272px; background-color:#fff; text-align:center; height:72px; line-height:72px }
 #topnav .navbar-inner { background:none; border:none; box-shadow:none; filter:none }
 #topnav ul { padding:20px 0 0 0 }
@@ -60,7 +60,7 @@ li.dropdown { list-style:none }
 .headerdetails ul.topcartopen { font-size:12px }
 .headerdetails ul.topcartopen li > table { border-collapse: collapse; width: 100%; margin-bottom: 5px; padding:10px }
 .headerdetails ul.topcartopen li > table td {
-color: #; vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed #E7E7E7; }
+color:#390023; vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed #E7E7E7; }
 .headerdetails ul.topcartopen li > table .image { width: 1px; }
 .headerdetails ul.topcartopen li > table .image img { text-align: left; }
 .headerdetails ul.topcartopen li > table .name small { color: #999999; }
@@ -78,24 +78,25 @@ color: #; vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed #E7E
 .headerdetails li.carticon.dropdown { background:url(../img/sprite.png) no-repeat 10px -328px; padding:7px 10px 7px 45px }
 .buttonwrap { padding:10px; margin:5px 10px 10px 0 }
 /* ------------ Category Menu ------------ */
-#categorymenu { padding:7px 0 7px 0; background:#fdeece }
+#categorymenu { padding:7px 0 7px 0; background:#B39851 }
 #categorymenu:after { clear:both; content:"" }
 #categorymenu select { display:none }
 ul.categorymenu { margin:0px 6px 0px 6px }
 ul.categorymenu > li { position:relative; margin: 0; border-right:1px solid #eec28f }
 ul.categorymenu > li:last-child { border:none }
-ul.categorymenu > li > a { text-decoration: none; display: block; z-index: 6; position: relative; color:#4b5b58!Important; text-transform:uppercase; font-size:14px }
-ul.categorymenu > li:hover > a, ul.categorymenu > li > a.active { color:#fff!important; text-shadow:none; background-color:#f25c27 }
-ul.categorymenu > li > div { display: none; padding:15px; position: absolute; top: 97%; left: 7px; z-index: 99999; display: none; float: left; min-width: 120px; margin: 1px 0 0; list-style: none; background-color: #ffffff; border:1px solid #DDDDDD; border-bottom: 4px solid #F25C27; box-shadow : 0 5px 10px rgba(0, 0, 0, 0.2); -moz-box-shadow : 0 5px 10px rgba(0, 0, 0, 0.2);  -webkit-box-shadow : 0 5px 10px rgba(0, 0, 0, 0.2) }
+ul.categorymenu > li > a { text-decoration: none; display: block; z-index: 6; position: relative; color:white!Important; text-transform:uppercase; font-size:14px }
+ul.categorymenu > li:hover > a, ul.categorymenu > li > a.active { color:black!important; text-shadow:none; background-color:white }
+ul.categorymenu > li > div { display: none; padding:15px; position: absolute; top: 97%; left: 7px; z-index: 99999; display: none; float: left; min-width: 120px; margin: 1px 0 0; list-style: none; background-color: #ffffff; border:1px solid #DDDDDD; border-bottom: 2px solid #390023; box-shadow : 0 5px 10px rgba(0, 0, 0, 0.2); -moz-box-shadow : 0 5px 10px rgba(0, 0, 0, 0.2);  -webkit-box-shadow : 0 5px 10px rgba(0, 0, 0, 0.2) }
 .dropdown-menu {  padding:15px; position: absolute; top: 97%; left: 7px; z-index: 99999; display: none; float: left; min-width: 120px; margin: 1px 0 0; list-style: none; background-color: #ffffff; border:1px solid #DDDDDD; border-bottom: 4px solid #F25C27; border-radius:0; -moz-border-radius:0; -webkit-border-radius:0  }
 ul.categorymenu > li:hover > div { display: table; width:100%; vertical-align:top }
-ul.categorymenu > li > div > ul { display: table-cell; vertical-align:top; fl }
+ul.categorymenu > li > div > ul { display: table-cell; vertical-align:top;
+ float: left; }
 ul.categorymenu > li ul + ul { padding-left: 20px; }
 ul.categorymenu > li ul > li { display:block; float:left; width:100%; border-bottom:1px dashed #dddddd }
 ul.categorymenu > li > div > ul.arrow li a { padding:8px 8px 8px 8px; display:block }
 ul.categorymenu > li ul > li > a { text-decoration: none; display: block; white-space: nowrap; min-width: 120px; padding:8px; }
-ul.categorymenu > li > div > ul li:hover a { background-color: #f25c27; color:#fff; text-shadow:none }
-ul.categorymenu > li > div > ul > li > a { color: #999999; }
+ul.categorymenu > li > div > ul li:hover a { /*background-color: #f25c27*/; color: #f25c27; text-shadow:none }
+ul.categorymenu > li > div > ul > li > a { color: #390023; }
 ul.categorymenu > li ul > li img { margin:3px; max-width:none }
 .breadcrumb {margin-bottom:30px}
 /* ------------ otherddetails ------------ */
@@ -122,7 +123,7 @@ ul.categorymenu > li ul > li img { margin:3px; max-width:none }
 #newslettersignup .newsletter2 {padding:0; background:none; height:80px }
 #newslettersignup .newsletter h2 { font-size:20px; color:#5e626b;  line-height:normal; margin:0px }
 /* ------------ Featured Proudcts ------------ */
-#categorymenu { margin:40px 0 50px 0 }
+#categorymenu { margin:1px 0 1px 0 }
 
 #featured:after, #latest:after, #related:after, #category:after, #popularbrands:after, #newslettersignup .container:after  {clear: both;
  visibility: hidden;
@@ -426,8 +427,9 @@ a.tweet_avatar { margin:5px 5px 5px 0; float:left }
 .tweet_list .tweet_avatar { float: left; }
 .tweet_time { clear:both }
 /* footersocial  */
-.footersocial { padding:30px 0 40px; background:#FDEECE; color:#5E626B }
-.footersocial h2 { margin-bottom:30px; font-size:18px; color:#5e626b; text-transform:uppercase; border-bottom:1px dashed #999; padding: 0 0 5px 0 }
+.footersocial { padding:30px 0 40px; background: #540038; color: #959b98
+}
+.footersocial h2 { margin-bottom:30px; font-size:18px; color: #bbc0ca; text-transform:uppercase; border-bottom:1px dashed #999; padding: 0 0 5px 0 }
 #footersocial { float:right; margin-right:-12px }
 #footersocial a { background:url(../img/footericon.png) no-repeat; height:30px; width:30px; margin-right:11px; text-indent:-9999px; overflow:hidden; display:inline-block; margin-bottom:5px; -moz-transition: all .2s ease;
 -webkit-transition: all .2s ease;
@@ -489,7 +491,7 @@ text-align:center
  .thumbnail .pricetag {
 background:none;
 width:auto;
-height:aut;
+height:auto;
 padding:0px;
 margin:10px 0
 }
