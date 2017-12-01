@@ -24,7 +24,9 @@
     <!-------------------------Facebook meta -------------------------------->
     <meta property=”fb:app_id” content=”937162853100934”/>
     <meta property=”fb:admins” content=”937162853100934”>
+
 </head>
+
 <body>
 
 <!-- Facebook live chat -->
@@ -203,9 +205,7 @@
 <!-- Header Start -->
 <header>
     @include('user.blocks.headerstrip')
-    <div class="container">
-        @include('user.blocks.nav')
-    </div>
+    @include('user.blocks.nav')
 </header>
 <!-- Header End -->
 <div id="maincontainer">
@@ -238,18 +238,6 @@
 <script type="text/javascript" src="{!! url('public/user/js/jquery.ba-throttle-debounce.min.js') !!}"></script>
 <script defer src="{!! url('public/user/js/custom.js') !!}"></script>
 <script defer src="{!! url('public/user/js/myScript.js') !!}"></script>
+<script defer src="{!! url('public/user/js/menuFixedTop.js') !!}"></script>
 </body>
-
-<!-- Facebook comment-->
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=937162853100934';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-<!-- End Facebook comment-->
-
 </html>

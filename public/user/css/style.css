@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 /* ------------ Reset ------------ */
+
 body { font-family: 'Open Sans', sans-serif; color:#96979d; font-size:13px; margin:0px; padding:0px; background: #f8f8f8;}
 a { color :#96979d; text-decoration:none }
 a:hover { text-decoration:none; color:#F25C27 }
@@ -78,7 +79,7 @@ color:#390023; vertical-align: top; padding: 5px 10px; border-bottom: 1px dashed
 .headerdetails li.carticon.dropdown { background:url(../img/sprite.png) no-repeat 10px -328px; padding:7px 10px 7px 45px }
 .buttonwrap { padding:10px; margin:5px 10px 10px 0 }
 /* ------------ Category Menu ------------ */
-#categorymenu { padding:7px 0 7px 0; background:#B39851 }
+#categorymenu { padding:7px 0 7px 0; background:#B39851; }
 #categorymenu:after { clear:both; content:"" }
 #categorymenu select { display:none }
 ul.categorymenu { margin:0px 6px 0px 6px }
@@ -99,6 +100,16 @@ ul.categorymenu > li > div > ul li:hover a { /*background-color: #f25c27*/; colo
 ul.categorymenu > li > div > ul > li > a { color: #390023; }
 ul.categorymenu > li ul > li img { margin:3px; max-width:none }
 .breadcrumb {margin-bottom:30px}
+/*--***************tao fixed top khi scroll (tu dong them class fix bang js)*/
+.head_nav.fix {
+ left: 0;
+ max-width: 100%;
+ overflow: visible;
+ position: fixed !important;
+ top: 0;
+ width: 100%;
+ z-index: 1000;
+}
 /* ------------ otherddetails ------------ */
 .otherddetails { border:1px solid #dddddd; margin:60px auto 0 auto }
 .otherddetails .otherddetailspart { background:url(../img/otherseperate.png) no-repeat right center; width:25%; float:left; display:inline-block }
