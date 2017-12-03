@@ -35,6 +35,7 @@
         </ul>
     </div>
 </section>
+
 <!-- Latest Product-->
 <section id="latest" class="row">
     <div class="container">

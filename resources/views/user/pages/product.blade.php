@@ -9,20 +9,35 @@
                 <!-- Left Image-->
                 <div class="span5">
                     <ul class="thumbnails mainimage">
+                        {{--Hien thi hinh anh chinh cua sp--}}
+                        <li class="span5">
+                            <a  rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4" class="thumbnail cloud-zoom" href="{!! url('resources/upload/'.$product->image) !!}">
+                                <img src="{!! url('resources/upload/'.$product->image) !!}" alt="" title="">
+                            </a>
+                        </li>
+                        {{--Hien thi hinh anh detail--}}
                         @foreach($imageDetail as $item)
                             <li class="span5">
                                 <a  rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4" class="thumbnail cloud-zoom" href="{!! url('resources/upload/detail/'.$item->image) !!}">
-                                    <img src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="hinh anh chi tiet sp" title="dsfdsfs">
+                                    <img src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="" title="">
                                 </a>
                             </li>
                         @endforeach
                     </ul>
                     <ul class="thumbnails mainimage">
+                        {{--Hien thi hinh anh chinh cua sp--}}
+                        <li class="producthtumb">
+                            <a class="thumbnail" >
+                                <img  src="{!! url('resources/upload/'.$product->image) !!}" alt="" title="">
+                            </a>
+                        </li>
+                        {{--Hien thi hinh anh detail--}}
                         @foreach($imageDetail as $item)
                             <li class="producthtumb">
                                 <a class="thumbnail" >
                                     <img  src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="" title="">
                                 </a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
@@ -67,10 +82,7 @@
                                     <div class="tab-pane" id="producttag">
                                         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                             Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s, when an unknown printer took a galley of type and scrambled it to
-                                            make a type specimen book. It has survived not only five centuries, but also
-                                            the leap into electronic typesetting, remaining essentially unchanged. It
-                                            was popularised in the 1960s with the release of Letraset sheets containing
+                                            pularised in the 1960s with the release of Letraset sheets containing
                                             Lorem Ipsum passages, and more recently with desktop publishing software
                                             like Aldus PageMaker including versions of Lorem Ipsum <br>
                                             <br>
@@ -111,9 +123,7 @@
         </div>
     </section>
     <section>
-        <h4> plugin facebook</h4>
-        <div class="fb-comments" data-href="http://localhost/project_laravel/chi-tiet-san-pham/1/ao-thun" data-numposts="5"></div>
-    </section>
+
     <!--  Related Products-->
     <section id="related" class="row">
         <div class="container">

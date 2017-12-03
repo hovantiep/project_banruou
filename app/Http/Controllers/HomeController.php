@@ -31,7 +31,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // Lay ngau nhien sp
         $featuredProduct = Product::select('id', 'name', 'alias', 'price', 'image')->orderBy(DB::raw('RAND()'))->skip(0)->take(4)->get();
+
+        // Lay sp duoc them sau cung
         $latestProduct = Product::select('id', 'name', 'alias', 'price', 'image')->orderBy('id', 'DESC')->skip(0)->take(4)->get();
 
         return view('.user.pages.home')
@@ -64,10 +67,12 @@ class HomeController extends Controller
     public function chiTietSanPham($id)
     {
         $product = Product::find($id);
-
         $cate = $product->cate_id;
-        $related = Product::select('id', 'name', 'image', 'price', 'alias')->where('cate_id', $cate)->orderBy(DB::raw('RAND()'))->take(4)->get();
+        // lay san pham cung danh muc (loai tru sp dang xem)
+        $related = Product::select('id', 'name', 'image', 'price', 'alias')->where('cate_id', $cate)
+            ->where('id','<>', $id)->orderBy(DB::raw('RAND()'))->take(4)->get();
 
+        //lay tat ca hinh trong product_image
         $imageDetail = $product->productImage;
 
         return view('user.pages.product')
