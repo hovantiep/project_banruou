@@ -45,15 +45,18 @@ class HomeController extends Controller
     public function loaiSanPham($id)
     {
 //      Pagination
-        $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('id', 'DESC')->paginate(2);
+        $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('id', 'DESC')->paginate(9);
 
         // menu cate (left)
         $cate = Cate::select('parent_id')->where('id', $id)->first();
         $menuCate = Cate::select('id', 'name', 'alias')->where('parent_id', $cate->parent_id)->get();
 
-        $latestProduct = Product::select('id', 'name', 'alias', 'price', 'image')->orderBy('id', 'DESC')->skip(0)->take(4)->get();
+        $latestProduct = Product::select('id', 'name', 'alias', 'price', 'image')->where('cate_id', $id)->orderBy('id', 'DESC')->skip(0)->take(4)->get();
         $nameCate = DB::table('cates')->select('name')->where('id', $id)->first();
 
+        $bestSeller = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('price')->take(4)->get();
+
+        // sp ngau nhien
         $mustHave = Product::select('name', 'image')->orderBy(DB::raw('RAND()'))->take(2)->get();
 
         return view('user.pages.category')
@@ -61,7 +64,42 @@ class HomeController extends Controller
             ->with('menuCate', $menuCate)
             ->with('latestProduct', $latestProduct)
             ->with('mustHave', $mustHave)
-            ->with('nameCate', $nameCate);
+            ->with('nameCate', $nameCate)
+            ->with('bestSeller', $bestSeller);
+    }
+
+    public function loaiSanPham2()
+    {
+        //lay tat ca sp co parent
+
+        $products = Cate::with('product')->where('name', 'BIA')->select('id')->get();
+        //--> trong cate lay id=11 ra dc cha --> lay parent_id truy van thi ra id-->tim cate_id nam trong la ok
+
+        $products2 = Product::with('cate')->get();
+        dump($products2);
+        //lay ra sp co cate_id
+//      Pagination
+        $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $parent)->orderBy('id', 'DESC')->paginate(9);
+/*
+        // menu cate (left)
+        $cate = Cate::select('parent_id')->where('id', $id)->first();
+        $menuCate = Cate::select('id', 'name', 'alias')->where('parent_id', $cate->parent_id)->get();
+
+        $latestProduct = Product::select('id', 'name', 'alias', 'price', 'image')->where('cate_id', $id)->orderBy('id', 'DESC')->skip(0)->take(4)->get();
+        $nameCate = DB::table('cates')->select('name')->where('id', $id)->first();
+
+        $bestSeller = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('price')->take(4)->get();
+
+        // sp ngau nhien
+        $mustHave = Product::select('name', 'image')->orderBy(DB::raw('RAND()'))->take(2)->get();*/
+
+        return view('user.pages.category')
+            ->with('productCates', $productCates)
+            /*->with('menuCate', $menuCate)
+            ->with('latestProduct', $latestProduct)
+            ->with('mustHave', $mustHave)
+            ->with('nameCate', $nameCate)
+            ->with('bestSeller', $bestSeller)*/;
     }
 
     public function chiTietSanPham($id)

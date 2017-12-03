@@ -29,24 +29,14 @@
                     <div class="sidewidt">
                         <h2 class="heading2"><span>Best Seller</span></h2>
                         <ul class="bestseller">
+                            @foreach($bestSeller as $item)
                             <li>
-                                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                                <a class="productname" href="product.html"> Product Name</a>
-                                <span class="procategory">Women Accessories</span>
-                                <span class="price">$250</span>
+                                <img width="50" height="50" src="{!! url('resources/upload/'.$item->image) !!}" alt="product" title="product">
+                                <a class="productname" href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"> {!! $item->name !!}</a>
+                                <span class="procategory">{!! $nameCate->name !!}</span>
+                                <span class="price">{!! number_format($item->price,0,',','.') !!}</span>
                             </li>
-                            <li>
-                                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                                <a class="productname" href="product.html"> Product Name</a>
-                                <span class="procategory">Electronics</span>
-                                <span class="price">$250</span>
-                            </li>
-                            <li>
-                                <img width="50" height="50" src="img/prodcut-40x40.jpg" alt="product" title="product">
-                                <a class="productname" href="product.html"> Product Name</a>
-                                <span class="procategory">Electronics</span>
-                                <span class="price">$250</span>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- Latest Product -->
@@ -57,7 +47,7 @@
                                 <li>
                                     <img width="50" height="50" src="{!! url('resources/upload/'.$item->image) !!}"
                                          alt="product" title="product">
-                                    <a class="productname" href="product.html"> {!! $item->name !!}</a>
+                                    <a class="productname" href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"> {!! $item->name !!}</a>
                                     <span class="procategory">{!! $nameCate->name !!}</span>
                                     <span class="price">{!! number_format($item->price,0,',','.') !!}</span>
                                 </li>

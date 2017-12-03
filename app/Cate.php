@@ -13,4 +13,5 @@ class Cate extends Model
     public function product(){
     	return $this->hasMany('project1\Product','cate_id');
     }
+
 }
