@@ -24,7 +24,8 @@
     <!-------------------------Facebook meta -------------------------------->
     <meta property=”fb:app_id” content=”937162853100934”/>
     <meta property=”fb:admins” content=”937162853100934”>
-
+    {{--Google Font--}}
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 
 <body>
