@@ -4,6 +4,18 @@
 
     <section id="product">
         <div class="container">
+            <!--  breadcrumb -->
+            <ul class="breadcrumb">
+                <li>
+                    <a href="{!! url('/') !!}">Trang chủ</a>
+                    <span class="divider">/</span>
+                </li>
+                <li>
+                    <a href="{!! route('loaiSanPham',[$nameCate->id,$nameCate->alias]) !!}">{{$nameCate->name}}</a>
+                    <span class="divider">/</span>
+                </li>
+                <li class="active">Bia</li>
+            </ul>
             <!-- Product Details-->
             <div class="row">
                 <!-- Left Image-->
@@ -127,7 +139,7 @@
     <!--  Related Products-->
     <section id="related" class="row">
         <div class="container">
-            <h1 class="heading1"><span class="maintext">Related Products</span><span class="subtext"> See Our Most featured Products</span>
+            <h1 class="heading1"><span class="maintext">Sản phẩm cùng danh mục</span><span class="subtext"> Xem sản phẩm nổi bật nhất của chúng tôi</span>
             </h1>
             <ul class="thumbnails">
                 @foreach($related as $item)

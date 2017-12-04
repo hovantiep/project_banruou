@@ -10,7 +10,7 @@
 <!-- Featured Product-->
 <section id="featured" class="row mt40">
     <div class="container">
-        <h1 class="heading1"><span class="maintext">Featured Products</span><span class="subtext"> See Our Most featured Products</span>
+        <h1 class="heading1"><span class="maintext">Sản phẩm nổi bật</span><span class="subtext"> Xem sản phẩm nổi bật nhất của chúng tôi</span>
         </h1>
         <ul class="thumbnails">
             @foreach( $featuredProduct as $item)
@@ -22,7 +22,7 @@
                         <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img alt="" src="{!! url('resources/upload/'.$item->image) !!}"></a>
 
                         <div class="pricetag">
-                            <span class="spiral"></span><a href="{!! route('muaHang',[$item->id,$item->alias]) !!}" class="productcart">ADD TO CART</a>
+                            <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
 
                             <div class="price">
                                 <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
@@ -39,7 +39,7 @@
 <!-- Latest Product-->
 <section id="latest" class="row">
     <div class="container">
-        <h1 class="heading1"><span class="maintext">Latest Products</span><span class="subtext"> See Our  Latest Products</span>
+        <h1 class="heading1"><span class="maintext">Sản phẩm mới nhất</span><span class="subtext"> Xem sản phẩm mới nhất của chúng tôi</span>
         </h1>
         <ul class="thumbnails">
             @foreach($latestProduct as $item)
@@ -51,7 +51,7 @@
                         <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img alt="" src="{!! asset('resources/upload/'.$item->image) !!}"></a>
 
                         <div class="pricetag">
-                            <span class="spiral"></span><a href="{!! route('muaHang',[$item->id,$item->alias]) !!}" class="productcart">ADD TO CART</a>
+                            <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
 
                             <div class="price">
                                 <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>

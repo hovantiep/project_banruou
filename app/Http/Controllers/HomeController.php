@@ -59,21 +59,41 @@ class HomeController extends Controller
                 ->select('products.id', 'products.name', 'products.alias', 'products.price', 'products.image', 'cate_id')
                 ->orderBy('products.id', 'DESC')
                 ->paginate(9);
+
+            // for category (left)
+            $latestProduct = DB::table('products')
+                ->join('cates', 'cate_id', '=', 'cates.id')
+                ->where('parent_id', $id)
+                ->select('products.id', 'products.name', 'products.alias', 'products.price', 'products.image', 'cate_id')
+                ->orderBy('products.id', 'DESC')
+                ->take(4)
+                ->get();
+            $nameCate = Cate::with('product')
+                ->where('id', $id)
+                ->select('cates.name')
+                ->first();
+            $bestSeller = DB::table('products')
+                ->join('cates', 'cate_id', '=', 'cates.id')
+                ->where('parent_id', $id)
+                ->select('products.id', 'products.name', 'products.alias', 'products.price', 'products.image', 'cate_id')
+                ->orderBy('products.price')
+                ->take(4)
+                ->get();
         }
         else{
             $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')
                 ->where('cate_id', $id)
                 ->orderBy('id', 'DESC')
                 ->paginate(9);
+
+            // for category (left)
+            $latestProduct = Product::select('id', 'name', 'alias', 'price', 'image')->where('cate_id', $id)->orderBy('id', 'DESC')->skip(0)->take(4)->get();
+            $nameCate = DB::table('cates')->select('name')->where('id', $id)->first();
+            $bestSeller = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('price')->take(4)->get();
         }
-        // menu cate (left)
+        //menu left
         $cate = Cate::select('parent_id')->where('id', $id)->first();
         $menuCate = Cate::select('id', 'name', 'alias')->where('parent_id', $cate->parent_id)->get();
-
-        $latestProduct = Product::select('id', 'name', 'alias', 'price', 'image')->where('cate_id', $id)->orderBy('id', 'DESC')->skip(0)->take(4)->get();
-        $nameCate = DB::table('cates')->select('name')->where('id', $id)->first();
-
-        $bestSeller = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('price')->take(4)->get();
 
         // sp ngau nhien
         $mustHave = Product::select('name', 'image')->orderBy(DB::raw('RAND()'))->take(2)->get();
@@ -87,57 +107,31 @@ class HomeController extends Controller
             ->with('bestSeller', $bestSeller);
     }
 
-    public function loaiSanPham2($parent_id)
-    {
-        //Lay parent_id
-        $cateParent = Cate::with('product')->where('id', $parent_id)->select('id')->first();
-
-        //ket noi 2 bang loc theo parent_id
-        $products = DB::table('products')
-            ->join('cates', 'cate_id', '=', 'cates.id')
-            ->where('parent_id', $cateParent->id)
-            ->paginate(9);
-        dump($products);
-        //lay ra sp co cate_id
-//      Pagination
-        $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $parent)->orderBy('id', 'DESC')->paginate(9);
-/*
-        // menu cate (left)
-        $cate = Cate::select('parent_id')->where('id', $id)->first();
-        $menuCate = Cate::select('id', 'name', 'alias')->where('parent_id', $cate->parent_id)->get();
-
-        $latestProduct = Product::select('id', 'name', 'alias', 'price', 'image')->where('cate_id', $id)->orderBy('id', 'DESC')->skip(0)->take(4)->get();
-        $nameCate = DB::table('cates')->select('name')->where('id', $id)->first();
-
-        $bestSeller = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('price')->take(4)->get();
-
-        // sp ngau nhien
-        $mustHave = Product::select('name', 'image')->orderBy(DB::raw('RAND()'))->take(2)->get();*/
-
-        return view('user.pages.category')
-            ->with('productCates', $productCates)
-            /*->with('menuCate', $menuCate)
-            ->with('latestProduct', $latestProduct)
-            ->with('mustHave', $mustHave)
-            ->with('nameCate', $nameCate)
-            ->with('bestSeller', $bestSeller)*/;
-    }
-
     public function chiTietSanPham($id)
     {
         $product = Product::find($id);
-        $cate = $product->cate_id;
+        $cateId = $product->cate_id;
         // lay san pham cung danh muc (loai tru sp dang xem)
-        $related = Product::select('id', 'name', 'image', 'price', 'alias')->where('cate_id', $cate)
-            ->where('id','<>', $id)->orderBy(DB::raw('RAND()'))->take(4)->get();
+        $related = Product::select('id', 'name', 'image', 'price', 'alias')
+            ->where('cate_id', $cateId)
+            ->where('id','<>', $id)
+            ->orderBy(DB::raw('RAND()'))
+            ->take(4)
+            ->get();
 
         //lay tat ca hinh trong product_image
         $imageDetail = $product->productImage;
 
+        //lay ra ten cate
+        $nameCate = Cate::select('name','id', 'alias')
+            ->where('id', $cateId)
+            ->first();
+
         return view('user.pages.product')
             ->with('product', $product)
             ->with('related', $related)
-            ->with('imageDetail', $imageDetail);
+            ->with('imageDetail', $imageDetail)
+            ->with('nameCate', $nameCate);
     }
 
     public function getLienHe()

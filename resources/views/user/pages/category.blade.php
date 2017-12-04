@@ -6,17 +6,17 @@
             <!--  breadcrumb -->
             <ul class="breadcrumb">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{!! url('/') !!}">Trang chủ</a>
                     <span class="divider">/</span>
                 </li>
-                <li class="active">Category</li>
+                <li class="active">{{ $nameCate->name }} </li>
             </ul>
             <div class="row">
                 <!-- Sidebar Start-->
                 <aside class="span3">
                     <!-- Category-->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Categories</span></h2>
+                        <h2 class="heading2"><span>Danh mục</span></h2>
                         <ul class="nav nav-list categories">
                             @foreach($menuCate as $item)
                                 <li>
@@ -27,7 +27,7 @@
                     </div>
                     <!--  Best Seller -->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Best Seller</span></h2>
+                        <h2 class="heading2"><span>Giá tốt</span></h2>
                         <ul class="bestseller">
                             @foreach($bestSeller as $item)
                             <li>
@@ -41,7 +41,7 @@
                     </div>
                     <!-- Latest Product -->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Latest Products</span></h2>
+                        <h2 class="heading2"><span>Sản phẩm mới</span></h2>
                         <ul class="bestseller">
                             @foreach($latestProduct as $item)
                                 <li>
@@ -56,7 +56,7 @@
                     </div>
                     <!--  Must have -->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Must have</span></h2>
+                        <h2 class="heading2"><span>Thiết yếu</span></h2>
 
                         <div class="flexslider" id="mainslider">
                             <ul class="slides">

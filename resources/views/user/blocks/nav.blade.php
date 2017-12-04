@@ -3,7 +3,7 @@
         <nav class="subnav">
 
             <ul class="nav-pills categorymenu">
-                <li><a class="" href="{{ url('/') }}">Home</a></li>
+                <li><a class="" href="{{ url('/') }}">Trang chủ</a></li>
                 <?php
                 $level_0 = DB::table('cates')->where('parent_id', 0)->get();
                 ?>
@@ -25,7 +25,7 @@
                         @endif
                     </li>
                 @endforeach
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
     </div>

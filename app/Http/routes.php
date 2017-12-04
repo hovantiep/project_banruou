@@ -75,8 +75,6 @@ Route::get('/home', 'HomeController@index');//->middleware("verify");
 Route::post('/home', 'HomeController@index');
 
 Route::get('loai-san-pham/{id}/{alias}', ['as' => 'loaiSanPham', 'uses' => 'HomeController@loaiSanPham']);
-Route::get('loai-san-pham2/{parent_id}', ['as' => 'loaiSanPham2', 'uses' => 'HomeController@loaiSanPham2']);
-
 
 Route::get('chi-tiet-san-pham/{id}/{alias}', ['as' => 'chiTietSanPham', 'uses' => 'HomeController@chiTietSanPham']);
 
