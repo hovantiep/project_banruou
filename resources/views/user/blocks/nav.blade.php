@@ -8,7 +8,7 @@
                 $level_0 = DB::table('cates')->where('parent_id', 0)->get();
                 ?>
                 @foreach($level_0 as $item_0)
-                    <li><a href="{{ route('loaiSanPham2') }}">{{ $item_0->name }}</a>
+                    <li><a href="{{ route('loaiSanPham',[$item_0->id, $item_0->alias]) }}">{{ $item_0->name }}</a>
                         <?php
                         $level_1 = DB::table('cates')->where('parent_id', $item_0->id)->get();
                         ?>

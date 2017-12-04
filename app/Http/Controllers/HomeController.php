@@ -44,9 +44,28 @@ class HomeController extends Controller
 
     public function loaiSanPham($id)
     {
-//      Pagination
-        $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $id)->orderBy('id', 'DESC')->paginate(9);
+        //lay parent_id
+        $parentId = Cate::with('product')
+            ->where('id', $id)
+            ->select('parent_id')
+            ->first();
 
+        //parent_id = 0 -> category all sub
+        if($parentId->parent_id == 0){
+            //lay products: ket noi 2 bang loc theo id co parent_id=0
+            $productCates = DB::table('products')
+                ->join('cates', 'cate_id', '=', 'cates.id')
+                ->where('parent_id', $id)
+                ->select('products.id', 'products.name', 'products.alias', 'products.price', 'products.image', 'cate_id')
+                ->orderBy('products.id', 'DESC')
+                ->paginate(9);
+        }
+        else{
+            $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')
+                ->where('cate_id', $id)
+                ->orderBy('id', 'DESC')
+                ->paginate(9);
+        }
         // menu cate (left)
         $cate = Cate::select('parent_id')->where('id', $id)->first();
         $menuCate = Cate::select('id', 'name', 'alias')->where('parent_id', $cate->parent_id)->get();
@@ -68,15 +87,17 @@ class HomeController extends Controller
             ->with('bestSeller', $bestSeller);
     }
 
-    public function loaiSanPham2()
+    public function loaiSanPham2($parent_id)
     {
-        //lay tat ca sp co parent
+        //Lay parent_id
+        $cateParent = Cate::with('product')->where('id', $parent_id)->select('id')->first();
 
-        $products = Cate::with('product')->where('name', 'BIA')->select('id')->get();
-        //--> trong cate lay id=11 ra dc cha --> lay parent_id truy van thi ra id-->tim cate_id nam trong la ok
-
-        $products2 = Product::with('cate')->get();
-        dump($products2);
+        //ket noi 2 bang loc theo parent_id
+        $products = DB::table('products')
+            ->join('cates', 'cate_id', '=', 'cates.id')
+            ->where('parent_id', $cateParent->id)
+            ->paginate(9);
+        dump($products);
         //lay ra sp co cate_id
 //      Pagination
         $productCates = Product::select('id', 'name', 'alias', 'price', 'image', 'cate_id')->where('cate_id', $parent)->orderBy('id', 'DESC')->paginate(9);
