@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="214759ee-2884-4a95-8633-b787aa354d71" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/user/css/style.css" afterPath="$PROJECT_DIR$/public/user/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/master.blade.php" />
     </list>
     <ignored path="project_laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -270,30 +268,7 @@
               <item name="project_laravel" type="b2602c69:ProjectViewProjectNode" />
               <item name="project_laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="project_laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="project_laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="blocks" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="project_laravel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project_laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="upload" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -423,14 +398,7 @@
       <workItem from="1512133859257" duration="7470000" />
       <workItem from="1512287287093" duration="2833000" />
       <workItem from="1512308712112" duration="11460000" />
-      <workItem from="1512355482784" duration="9018000" />
-    </task>
-    <task id="LOCAL-00005" summary="CK editor &amp; finder">
-      <created>1460533975247</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1460533975247</updated>
+      <workItem from="1512355482784" duration="9627000" />
     </task>
     <task id="LOCAL-00006" summary="CK editor &amp; finder">
       <created>1460535778465</created>
@@ -768,11 +736,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512368114686</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="fix font">
+      <created>1512369162228</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1512369162228</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57969000" />
+    <option name="totallyTimeSpent" value="58578000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -787,7 +762,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28290468" sideWeight="0.5122349" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20204978" sideWeight="0.4877651" order="0" side_tool="false" content_ui="combo" x="254" y="96" width="423" height="609" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30307466" sideWeight="0.4877651" order="0" side_tool="false" content_ui="combo" x="254" y="96" width="423" height="609" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31160572" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22692889" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -829,7 +804,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="product list" />
     <MESSAGE value="product delete (relation)" />
     <MESSAGE value="product edit" />
     <MESSAGE value="product edit ajax" />
@@ -854,7 +828,8 @@
     <MESSAGE value="chinh sua giao dien" />
     <MESSAGE value="chinh sua category allproduct" />
     <MESSAGE value="chinh sua category allproduct (home controller)" />
-    <option name="LAST_COMMIT_MESSAGE" value="chinh sua category allproduct (home controller)" />
+    <MESSAGE value="fix font" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix font" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

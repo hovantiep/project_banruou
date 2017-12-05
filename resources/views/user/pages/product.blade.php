@@ -14,7 +14,7 @@
                     <a href="{!! route('loaiSanPham',[$nameCate->id,$nameCate->alias]) !!}">{{$nameCate->name}}</a>
                     <span class="divider">/</span>
                 </li>
-                <li class="active">Bia</li>
+                <li class="active">{{$product->name}}</li>
             </ul>
             <!-- Product Details-->
             <div class="row">
@@ -72,24 +72,24 @@
                             <!-- Product Description tab & comments-->
                             <div class="productdesc">
                                 <ul class="nav nav-tabs" id="myTab">
-                                    <li class="active"><a href="#description">Description</a>
+                                    <li class="active"><a href="#review">Intro</a>
                                     </li>
                                     <li><a href="#content">Content</a>
                                     </li>
-                                    <li><a href="#review">Intro</a>
+                                    <li><a href="#description">Description</a>
                                     </li>
                                     <li><a href="#producttag">Tags</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div class="tab-pane active" id="description">
-                                        {!! $product->description !!}
+                                    <div class="tab-pane active" id="review">
+                                        {!! $product->intro !!}
                                     </div>
                                     <div class="tab-pane " id="content">
                                         {!! $product->content !!}
                                     </div>
-                                    <div class="tab-pane" id="review">
-                                        {!! $product->intro !!}
+                                    <div class="tab-pane" id="description">
+                                        {!! $product->description !!}
                                     </div>
                                     <div class="tab-pane" id="producttag">
                                         <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
