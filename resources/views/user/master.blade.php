@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Cua Hang ruou che</title>
+    <title>THẾ GIỚI RƯỢU LONG AN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="@yield('description')">
     <meta name="author" content="Van Tiep">
@@ -161,9 +161,9 @@
     <div class="ctrlq fb-overlay"></div>
     <div class="fb-widget">
         <div class="ctrlq fb-close"></div>
-        <div class="fb-page" data-href="https://www.facebook.com/GvthcsLA" data-tabs="messages" data-width="360"
+        <div class="fb-page" data-href="https://www.facebook.com/Thegioiruoulongan-157813008283173/" data-tabs="messages" data-width="360"
              data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false"></div>
-        <div class="fb-credit"><a href="https://chanhtuoi.com" target="_blank">Powered by Chanhtuoi</a></div>
+        <div class="fb-credit"><a href="" target="_blank">Powered by facebook</a></div>
         <div id="fb-root"></div>
     </div>
     <a href="https://m.me/GvthcsLA" title="Gửi tin nhắn cho chúng tôi qua Facebook" class="ctrlq fb-button">

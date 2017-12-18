@@ -1,12 +1,12 @@
 @extends('user.master')
-@section('description','Đây là trang chủ')
+@section('description','')
 @section('content')
     <section id="product">
         <div class="container">
             <!--  breadcrumb -->
             <ul class="breadcrumb">
                 <li>
-                    <a href="{!! url('/') !!}">Trang chủ</a>
+                    <a href="{!! url('/') !!}">MAIN PAGE</a>
                     <span class="divider">/</span>
                 </li>
                 <li class="active">{{ $nameCate->name }} </li>
@@ -16,7 +16,7 @@
                 <aside class="span3">
                     <!-- Category-->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Danh mục</span></h2>
+                        <h2 class="heading2"><span>SAME TYPE</span></h2>
                         <ul class="nav nav-list categories">
                             @foreach($menuCate as $item)
                                 <li>
@@ -27,7 +27,7 @@
                     </div>
                     <!--  Best Seller -->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Giá tốt</span></h2>
+                        <h2 class="heading2"><span>GOOD PRICE</span></h2>
                         <ul class="bestseller">
                             @foreach($bestSeller as $item)
                             <li>
@@ -41,7 +41,7 @@
                     </div>
                     <!-- Latest Product -->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Sản phẩm mới</span></h2>
+                        <h2 class="heading2"><span>NEW ITEMS</span></h2>
                         <ul class="bestseller">
                             @foreach($latestProduct as $item)
                                 <li>
@@ -56,7 +56,7 @@
                     </div>
                     <!--  Must have -->
                     <div class="sidewidt">
-                        <h2 class="heading2"><span>Thiết yếu</span></h2>
+                        <h2 class="heading2"><span></span></span></h2>
 
                         <div class="flexslider" id="mainslider">
                             <ul class="slides">
@@ -92,9 +92,7 @@
                                                                 src="{!! url('resources/upload/'.$item->image) !!}"></a>
 
                                                     <div class="pricetag">
-                                                        <span class="spiral"></span><a href="#" class="productcart">ADD
-                                                            TO CART</a>
-
+                                                        <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
                                                         <div class="price">
                                                             <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
                                                             <div class="priceold"></div>

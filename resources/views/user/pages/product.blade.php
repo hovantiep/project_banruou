@@ -1,20 +1,27 @@
 @extends('user.master')
-@section('description','Đây là trang chủ')
+@section('description','main page')
 @section('content')
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=149800208993194';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <section id="product">
         <div class="container">
             <!--  breadcrumb -->
             <ul class="breadcrumb">
                 <li>
-                    <a href="{!! url('/') !!}">Trang chủ</a>
+                    <a href="{!! url('/') !!}">Main page</a>
                     <span class="divider">/</span>
                 </li>
                 <li>
                     <a href="{!! route('loaiSanPham',[$nameCate->id,$nameCate->alias]) !!}">{{$nameCate->name}}</a>
                     <span class="divider">/</span>
                 </li>
-                <li class="active">{{$product->name}}</li>
+                <li class="active">{{ $product->name }}</li>
             </ul>
             <!-- Product Details-->
             <div class="row">
@@ -66,7 +73,11 @@
                                 </div>
                             </div>
                             <ul class="productpagecart">
-                                <li><a class="cart" href="#">Add to Cart</a>
+                                <li><a class="cart" href="#">ADD TO CART</a>
+                                </li>
+                                <li>
+                                    <div class="fb-share-button" data-href="{!! route('loaiSanPham',[$nameCate->id,$nameCate->alias]) !!}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">SHARING YOUR PRODUCTS</a></div>
+                                    
                                 </li>
                             </ul>
                             <!-- Product Description tab & comments-->
@@ -92,13 +103,6 @@
                                         {!! $product->description !!}
                                     </div>
                                     <div class="tab-pane" id="producttag">
-                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            pularised in the 1960s with the release of Letraset sheets containing
-                                            Lorem Ipsum passages, and more recently with desktop publishing software
-                                            like Aldus PageMaker including versions of Lorem Ipsum <br>
-                                            <br>
-                                        </p>
                                         <ul class="tags">
                                             <li><a href="#"><i class="icon-tag"></i> Webdesign</a>
                                             </li>
@@ -139,7 +143,7 @@
     <!--  Related Products-->
     <section id="related" class="row">
         <div class="container">
-            <h1 class="heading1"><span class="maintext">Sản phẩm cùng danh mục</span><span class="subtext"> Xem sản phẩm nổi bật nhất của chúng tôi</span>
+            <h1 class="heading1"><span class="maintext">LASTEST PRODUCTS</span><span class="subtext"></span>
             </h1>
             <ul class="thumbnails">
                 @foreach($related as $item)

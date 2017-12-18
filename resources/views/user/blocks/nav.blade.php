@@ -25,7 +25,7 @@
                         @endif
                     </li>
                 @endforeach
-                <li><a href="#">Liên hệ</a></li>
+                
             </ul>
         </nav>
     </div>

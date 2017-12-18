@@ -37,7 +37,7 @@ h2 {font-size:24px}
 input:focus:invalid, textarea:focus:invalid, select:focus:invalid { color: #96979d; }
 /* ------------ Header ------------ */
 .headerstrip { height:72px; background:#390023 }
-.logo { width:272px; background-color:#fff; text-align:center; height:72px; line-height:72px }
+.logo { width:272px; background-color:#390023; text-align:center; height:72px; line-height:72px }
 #topnav .navbar-inner { background:none; border:none; box-shadow:none; filter:none }
 #topnav ul { padding:20px 0 0 0 }
 #topnav ul li { padding:5px 0 }
@@ -142,8 +142,8 @@ ul.categorymenu > li ul > li img { margin:3px; max-width:none }
 	content: "";
 	clear: both;
 	height: 0;;}
-.thumbnails .prdocutname { font-size:16px;  color:#5e626b; text-transform:uppercase; text-align:center; margin:0 0 10px 0; display:block }
-.thumbnails.list .thumbnail .prdocutname { font-size:16px;  color:#5e626b; text-transform:uppercase; text-align:left; margin:0 0 10px 0; display:block }
+.thumbnails .prdocutname { font-size:12px;  color:#5e626b; text-transform:uppercase; text-align:center; margin:0 0 10px 0; display:block }
+.thumbnails.list .thumbnail .prdocutname { font-size:12px;  color:#5e626b; text-transform:uppercase; text-align:left; margin:0 0 10px 0; display:block }
 .thumbnails.list > li { margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid #ccc }
 .thumbnails.list .productdiscrption { margin:10px 0 25px 0 }
 .thumbnails.list .thumbnail .shortlinks { display:block; width:auto; position:static; text-align:left; margin:10px 0 25px 0 }

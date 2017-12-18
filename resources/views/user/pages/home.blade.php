@@ -1,5 +1,5 @@
 @extends('user.master')
-@section('description','Đây là trang chủ')
+@section('description','')
 @section('content')
         <!-- Slider Start-->
 @include('user.blocks.slider')
