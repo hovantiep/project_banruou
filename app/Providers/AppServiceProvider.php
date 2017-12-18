@@ -1,6 +1,6 @@
 <?php
 
-namespace project1\Providers;
+namespace banruou\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

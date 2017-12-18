@@ -1,9 +1,9 @@
 <?php
 
-namespace project1\Http\Controllers;
+namespace banruou\Http\Controllers;
 
-use project1\Cate;
-use project1\Http\Requests\CateRequest;
+use banruou\Cate;
+use banruou\Http\Requests\CateRequest;
 use Illuminate\Http\Request;
 
 class CateController extends Controller

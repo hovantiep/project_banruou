@@ -1,10 +1,10 @@
 <?php
 
-namespace project1\Http\Controllers\Auth;
+namespace banruou\Http\Controllers\Auth;
 
-use project1\Http\Controllers\Controller;
-use project1\Http\Requests\LoginRequest;
-use project1\User;
+use banruou\Http\Controllers\Controller;
+use banruou\Http\Requests\LoginRequest;
+use banruou\User;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Validator;

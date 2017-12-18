@@ -1,6 +1,6 @@
 <?php
 
-namespace project1\Providers;
+namespace banruou\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'project1\Http\Controllers';
+    protected $namespace = 'banruou\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

@@ -1,6 +1,6 @@
 <?php
 
-namespace project1\Http\Middleware;
+namespace banruou\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

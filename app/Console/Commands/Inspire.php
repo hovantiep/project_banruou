@@ -1,6 +1,6 @@
 <?php
 
-namespace project1\Console\Commands;
+namespace banruou\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

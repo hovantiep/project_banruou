@@ -1,6 +1,6 @@
 <?php
 
-namespace project1\Http;
+namespace banruou\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -24,11 +24,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \project1\Http\Middleware\EncryptCookies::class,
+            \banruou\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \project1\Http\Middleware\VerifyCsrfToken::class,
+            \banruou\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
@@ -44,11 +44,11 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \project1\Http\Middleware\Authenticate::class,
+        'auth' => \banruou\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest' => \project1\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \banruou\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        //'verify' => \project1\Http\Middleware\VerifyMiddleware::class,
+        //'verify' => \banruou\Http\Middleware\VerifyMiddleware::class,
     ];
 }

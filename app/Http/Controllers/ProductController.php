@@ -1,12 +1,12 @@
 <?php
 
-namespace project1\Http\Controllers;
+namespace banruou\Http\Controllers;
 
-use project1\Cate;
-use project1\Http\Requests;
-use project1\Http\Requests\ProductRequest;
-use project1\Product;
-use project1\ProductImage;
+use banruou\Cate;
+use banruou\Http\Requests;
+use banruou\Http\Requests\ProductRequest;
+use banruou\Product;
+use banruou\ProductImage;
 use Request;
 
 //use Illuminate\Http\Request; // Tắt nếu sử dụng ajax

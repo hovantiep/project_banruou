@@ -2,70 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="214759ee-2884-4a95-8633-b787aa354d71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/LogoTheGioiRuou.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/LogoTheGioiRuou2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/banner3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/banner4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/user/img/logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Alicanto 2011 carmenere.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Alicanto CS Reserva.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Alicanto Cabernet Sauvignon Carmenere 2013.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Bin 222.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Bin 555.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Bin 888.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Bin 999.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Grandial rose.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Grandial sparkling brut.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/La Campagne Cabernet Sauvignon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/La Campagne Chardonay 2015.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/La Campagne Merlot 2016.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Mainson Francaise comte tolosan.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Maison Francaise 2016.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/Monastier chardonnay 2014.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/dauvergne ranvier chateauneuf du pape 2015.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/george wyndham cabernet sauvignon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/george wyndham shiraz cabernet.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/images/martel.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/jacob's creek cabernet sauvignon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/jacob's creek chardonnay.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/kangaroo sauvignon blanc.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/kangaroo sauvignon cabernet.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/kangaroo shiraz 2013.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/monastier cabernet sauvignon.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/v1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/v2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/upload/v3.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/Bia-Heineken-Phap-250ml.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/Ruou-Vang-1865-Cabernet-Sauvignon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/Ruou-Vang-Ecos-De-Rulo-Cabernet-Sauvignon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/Ruou-Vang-G7-CABERNET-SAUVIGNON-CLASSIC.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/Ruou-Vang-Vindoro-negroamaro.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/Ruou-vang-F-Negro-Amaro.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/detail/Ruo-u-vang-Montes-Classic-Cabernet-Sauvignon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/detail/Ruou-Vang-G7-CABERNET-SAUVIGNON-CLASSIC.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/upload/detail/Ruou-vang-F-Negro-Amaro.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/user/img/banner1.jpg" afterPath="$PROJECT_DIR$/public/user/img/banner1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/user/img/banner2.jpg" afterPath="$PROJECT_DIR$/public/user/img/banner2.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Cate.php" afterPath="$PROJECT_DIR$/app/Cate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Commands/Inspire.php" afterPath="$PROJECT_DIR$/app/Console/Commands/Inspire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Kernel.php" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Events/Event.php" afterPath="$PROJECT_DIR$/app/Events/Event.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/PasswordController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CateController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CateController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/user/css/flexslider.css" afterPath="$PROJECT_DIR$/public/user/css/flexslider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/user/css/style.css" afterPath="$PROJECT_DIR$/public/user/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/blocks/copyrightbottom.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/blocks/copyrightbottom.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/blocks/footersocial.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/blocks/footersocial.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/blocks/headerstrip.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/blocks/headerstrip.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/blocks/nav.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/blocks/nav.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/blocks/otherdetail.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/blocks/otherdetail.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/blocks/slider.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/blocks/slider.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/pages/category.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/pages/category.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/pages/contact.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/pages/contact.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/pages/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/pages/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/user/pages/product.blade.php" afterPath="$PROJECT_DIR$/resources/views/user/pages/product.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyMiddleware.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyMiddleware.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/CateRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/CateRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/Request.php" afterPath="$PROJECT_DIR$/app/Http/Requests/Request.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Requests/UserRequest.php" afterPath="$PROJECT_DIR$/app/Http/Requests/UserRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Jobs/Job.php" afterPath="$PROJECT_DIR$/app/Jobs/Job.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Product.php" afterPath="$PROJECT_DIR$/app/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ProductImage.php" afterPath="$PROJECT_DIR$/app/ProductImage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/app.php" afterPath="$PROJECT_DIR$/bootstrap/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/auth.php" afterPath="$PROJECT_DIR$/config/auth.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/factories/ModelFactory.php" afterPath="$PROJECT_DIR$/database/factories/ModelFactory.php" />
     </list>
     <ignored path="project_laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,18 +68,7 @@
     <favorites_list name="project_laravel" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,7 +128,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/product/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/pages/contact.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/emails/myEmail.blade.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/user/pages/shopping-cart.blade.php" />
         <option value="$PROJECT_DIR$/public/user/js/myScript.js" />
@@ -192,6 +154,7 @@
         <option value="$PROJECT_DIR$/resources/views/user/master.blade.php" />
         <option value="$PROJECT_DIR$/public/user/css/style.css" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -452,14 +415,7 @@
       <workItem from="1512308712112" duration="11460000" />
       <workItem from="1512355482784" duration="9627000" />
       <workItem from="1513577799926" duration="135000" />
-      <workItem from="1513578442854" duration="551000" />
-    </task>
-    <task id="LOCAL-00006" summary="CK editor &amp; finder">
-      <created>1460535778465</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1460535778465</updated>
+      <workItem from="1513578442854" duration="3409000" />
     </task>
     <task id="LOCAL-00007" summary="add product">
       <created>1460565648471</created>
@@ -797,11 +753,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512369162228</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="add share button">
+      <created>1513579159581</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1513579159583</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59264000" />
+    <option name="totallyTimeSpent" value="62122000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -820,7 +783,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31160572" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22692889" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31096563" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="43" y="87" width="330" height="419" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3797054" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -858,7 +821,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="product delete (relation)" />
     <MESSAGE value="product edit" />
     <MESSAGE value="product edit ajax" />
     <MESSAGE value="product edit: image" />
@@ -883,14 +845,14 @@
     <MESSAGE value="chinh sua category allproduct" />
     <MESSAGE value="chinh sua category allproduct (home controller)" />
     <MESSAGE value="fix font" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix font" />
+    <MESSAGE value="add share button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add share button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/upload/_thumbs/Images/images.jpg" />
     <entry file="file://$PROJECT_DIR$/resources/upload/_thumbs/Images/Mang(1).jpg" />
     <entry file="file://$PROJECT_DIR$/resources/upload/_thumbs/Images/Mang.jpg" />
     <entry file="file://$PROJECT_DIR$/resources/upload/product1.jpg" />
@@ -1065,13 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/pages/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -1125,6 +1080,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="27" column="81" lean-forward="false" selection-start-line="27" selection-start-column="81" selection-end-line="27" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/pages/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

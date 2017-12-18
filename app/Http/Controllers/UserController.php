@@ -1,10 +1,10 @@
 <?php
 
-namespace project1\Http\Controllers;
+namespace banruou\Http\Controllers;
 
-use project1\Http\Requests;
-use project1\Http\Requests\UserRequest;
-use project1\User;
+use banruou\Http\Requests;
+use banruou\Http\Requests\UserRequest;
+use banruou\User;
 use Hash;
 use Illuminate\Http\Request;
 

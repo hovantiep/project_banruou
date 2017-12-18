@@ -1,6 +1,6 @@
 <?php
 
-namespace project1\Console;
+namespace banruou\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;

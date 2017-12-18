@@ -1,8 +1,8 @@
 <?php
 
-namespace project1\Http\Requests;
+namespace banruou\Http\Requests;
 
-use project1\Http\Requests\Request;
+use banruou\Http\Requests\Request;
 
 class UserRequest extends Request
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace project1\Exceptions;
+namespace banruou\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;
