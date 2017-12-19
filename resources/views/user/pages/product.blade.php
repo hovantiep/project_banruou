@@ -1,14 +1,25 @@
 @extends('user.master')
-@section('description','main page')
+@section('description','Chuyen buon ban ruou')
+
+{{--Facebook meta--}}
+@section('og:url'){!! route("chiTietSanPham",[$product->id,$product->alias]) !!}@stop
+@section('og:title'){!! $product->name !!}@stop
+@section('og:description'){!! $product->intro !!}@stop
+@section('og:image'){!! url('resources/upload/'.$product->image) !!}@stop
+{{--End facebook meta--}}
+
 @section('content')
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=149800208993194';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=937162853100934';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
     <section id="product">
         <div class="container">
             <!--  breadcrumb -->
@@ -30,14 +41,17 @@
                     <ul class="thumbnails mainimage">
                         {{--Hien thi hinh anh chinh cua sp--}}
                         <li class="span5">
-                            <a  rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4" class="thumbnail cloud-zoom" href="{!! url('resources/upload/'.$product->image) !!}">
+                            <a rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4"
+                               class="thumbnail cloud-zoom" href="{!! url('resources/upload/'.$product->image) !!}">
                                 <img src="{!! url('resources/upload/'.$product->image) !!}" alt="" title="">
                             </a>
                         </li>
                         {{--Hien thi hinh anh detail--}}
                         @foreach($imageDetail as $item)
                             <li class="span5">
-                                <a  rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4" class="thumbnail cloud-zoom" href="{!! url('resources/upload/detail/'.$item->image) !!}">
+                                <a rel="position: 'inside' , showTitle: false, adjustX:-4, adjustY:-4"
+                                   class="thumbnail cloud-zoom"
+                                   href="{!! url('resources/upload/detail/'.$item->image) !!}">
                                     <img src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="" title="">
                                 </a>
                             </li>
@@ -46,15 +60,15 @@
                     <ul class="thumbnails mainimage">
                         {{--Hien thi hinh anh chinh cua sp--}}
                         <li class="producthtumb">
-                            <a class="thumbnail" >
-                                <img  src="{!! url('resources/upload/'.$product->image) !!}" alt="" title="">
+                            <a class="thumbnail">
+                                <img src="{!! url('resources/upload/'.$product->image) !!}" alt="" title="">
                             </a>
                         </li>
                         {{--Hien thi hinh anh detail--}}
                         @foreach($imageDetail as $item)
                             <li class="producthtumb">
-                                <a class="thumbnail" >
-                                    <img  src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="" title="">
+                                <a class="thumbnail">
+                                    <img src="{!! url('resources/upload/detail/'.$item->image) !!}" alt="" title="">
                                 </a>
                             </li>
                         @endforeach
@@ -76,8 +90,12 @@
                                 <li><a class="cart" href="#">ADD TO CART</a>
                                 </li>
                                 <li>
-                                    <div class="fb-share-button" data-href="{!! route('loaiSanPham',[$nameCate->id,$nameCate->alias]) !!}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">SHARING YOUR PRODUCTS</a></div>
-                                    
+                                    <div class="fb-share-button"
+                                         data-href="https://developers.facebook.com/docs/plugins/"
+                                         data-layout="button_count" data-size="large" data-mobile-iframe="true"><a
+                                                class="fb-xfbml-parse-ignore" target="_blank"
+                                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Chia
+                                            sẻ</a></div>
                                 </li>
                             </ul>
                             <!-- Product Description tab & comments-->
@@ -140,35 +158,35 @@
     </section>
     <section>
 
-    <!--  Related Products-->
-    <section id="related" class="row">
-        <div class="container">
-            <h1 class="heading1"><span class="maintext">LASTEST PRODUCTS</span><span class="subtext"></span>
-            </h1>
-            <ul class="thumbnails">
-                @foreach($related as $item)
-                    <li class="span3">
-                        <a class="prdocutname"
-                           href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}">{!! $item->name !!}</a>
+        <!--  Related Products-->
+        <section id="related" class="row">
+            <div class="container">
+                <h1 class="heading1"><span class="maintext">LASTEST PRODUCTS</span><span class="subtext"></span>
+                </h1>
+                <ul class="thumbnails">
+                    @foreach($related as $item)
+                        <li class="span3">
+                            <a class="prdocutname"
+                               href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}">{!! $item->name !!}</a>
 
-                        <div class="thumbnail">
-                            <span class="offer tooltip-test">Offer</span>
-                            <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img alt=""
-                                                                                                    src="{!! url('resources/upload/'.$item->image) !!}"></a>
+                            <div class="thumbnail">
+                                <span class="offer tooltip-test">Offer</span>
+                                <a href="{!! route("chiTietSanPham",[$item->id,$item->alias]) !!}"><img alt=""
+                                                                                                        src="{!! url('resources/upload/'.$item->image) !!}"></a>
 
-                            <div class="pricetag">
-                                <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
+                                <div class="pricetag">
+                                    <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
 
-                                <div class="price">
-                                    <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
-                                    <div class="priceold"></div>
+                                    <div class="price">
+                                        <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
+                                        <div class="priceold"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-    </section>
-    <!-- Popular Brands-->
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </section>
+        <!-- Popular Brands-->
 @endsection

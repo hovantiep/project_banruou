@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="span12">
-                <a href="{!! url('/') !!}" class="logo pull-left"><img src="/public/user/img/LogoTheGioiRuou2.png" alt="thegioiruou"
+                <a href="{!! url('/') !!}" class="logo pull-left"><img src="public/user/img/LogoTheGioiRuou2.png" alt="thegioiruou"
                                                                    title="thegioiruou"></a>
                 <!-- Top Nav Start -->
                 <div class="pull-left">

@@ -23,7 +23,13 @@
     <link rel="shortcut icon" href="assets/ico/favicon.html">
     <!-------------------------Facebook meta -------------------------------->
     <meta property=”fb:app_id” content=”937162853100934”/>
-    <meta property=”fb:admins” content=”937162853100934”>
+    <meta property=”fb:admins” content=”937162853100934”/>
+
+    <meta property="og:url"           content="@yield('og:url')" />
+     <meta property="og:title"         content="@yield('og:title')" />
+    <meta property="og:description"   content="@yield('og:description')" />
+    <meta property="og:image"         content="@yield('og:image')" />
+
     {{--Google Font--}}
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>

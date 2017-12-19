@@ -59,7 +59,7 @@ class HomeController extends Controller
                 ->select('products.id', 'products.name', 'products.alias', 'products.price', 'products.image', 'cate_id')
                 ->orderBy('products.id', 'DESC')
                 ->paginate(9);
-
+            dump($productCates);
             // for category (left)
             $latestProduct = DB::table('products')
                 ->join('cates', 'cate_id', '=', 'cates.id')
@@ -126,6 +126,7 @@ class HomeController extends Controller
         $nameCate = Cate::select('name','id', 'alias')
             ->where('id', $cateId)
             ->first();
+
 
         return view('user.pages.product')
             ->with('product', $product)
