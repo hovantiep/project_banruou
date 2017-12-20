@@ -142,7 +142,8 @@ ul.categorymenu > li ul > li img { margin:3px; max-width:none }
 	content: "";
 	clear: both;
 	height: 0;;}
-.thumbnails .prdocutname { font-size:12px;  color:#5e626b; text-transform:uppercase; text-align:center; margin:0 0 10px 0; display:block }
+.thumbnails .prdocutname { font-size:22px;  color:#5e626b; text-transform:uppercase; text-align:center; margin:0 0 10px 0; display:block; line-height: 1; min-height: 48px}
+
 .thumbnails.list .thumbnail .prdocutname { font-size:12px;  color:#5e626b; text-transform:uppercase; text-align:left; margin:0 0 10px 0; display:block }
 .thumbnails.list > li { margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid #ccc }
 .thumbnails.list .productdiscrption { margin:10px 0 25px 0 }
@@ -161,7 +162,7 @@ ul.categorymenu > li ul > li img { margin:3px; max-width:none }
 .thumbnail .shortlinks a.wishlist { background-position:0 -423px }
 .thumbnail .shortlinks a.compare { background-position:0 -462px }
 .thumbnail .price { float:right; margin-right:19px; text-align:right }
-.thumbnail .price .pricenew { font-size:16px; color:#5e626b; font-weight:bold }
+.thumbnail .price .pricenew { font-size:13px; color:#5e626b; font-weight:bold;line-height: 35px }
 .thumbnail .price .priceold { font-size:13px; color:#5e626b; text-decoration:line-through; color:#96979d; }
 
 
@@ -287,7 +288,7 @@ ul.total { font-size:16px; margin-top:5px; margin-right:10px }
 ul.total li { padding:10px 0 }
 ul.total li span.extra { width:150px; float:left; text-align:right; padding-right:20px }
 .totalamout { font-size:22px; color:#f25c27 }
-. /* login */
+/* login */
 .loginbox {
 padding:5px;
 }

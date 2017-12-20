@@ -25,7 +25,7 @@
                             <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
 
                             <div class="price">
-                                <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
+                                <div class="pricenew">{!! number_format($item->price,0,',','.') !!} Đ</div>
                                 <div class="priceold"></div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                             <span class="spiral"></span><a href="#" class="productcart">ADD TO CART</a>
 
                             <div class="price">
-                                <div class="pricenew">{!! number_format($item->price,0,',','.') !!}</div>
+                                <div class="pricenew">{!! number_format($item->price,0,',','.') !!} Đ</div>
                                 <div class="priceold"></div>
                             </div>
                         </div>

@@ -83,7 +83,7 @@
 
                             <div class="productprice">
                                 <div class="productpageprice">
-                                    <span class="spiral"></span>{!! number_format($product->price,0,',','.') !!}
+                                    <span class="spiral"></span>{!! number_format($product->price,0,',','.') !!} Đ
                                 </div>
                             </div>
                             <ul class="productpagecart">

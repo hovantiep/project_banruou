@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //https://www.thegioiruoula.tk/
+        if (!\App::environment('local')) {
+            \URL::forceSchema('https');
+       }
     }
 
     /**

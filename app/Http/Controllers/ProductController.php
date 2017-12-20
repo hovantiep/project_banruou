@@ -32,8 +32,8 @@ class ProductController extends Controller
         $file = $productRequest->file('fImages');
         if (isset($file)) {
             $file_name = $file->getClientOriginalName();
-            $product->image = $file_name;
-            $file->move('resources/upload/', $file_name);
+            $product->image = strToSlug($file_name);
+            $file->move('resources/upload/', strToSlug($file_name));
         }
 
         $product->keywords = $productRequest->txtKeywords;
@@ -42,16 +42,17 @@ class ProductController extends Controller
         $product->cate_id = $productRequest->sltCate;
         $product->save();
 
-        //Lưu Product Image
+        //Lưu Product Detail Image
         $product_id = $product->id;
         $pFiles = $productRequest->file('fProductDetail');
         foreach ($pFiles as $pFile) {
             $product_image = new ProductImage();
             if (isset($pFile)) {
                 $pFile_name = $pFile->getClientOriginalName();
-                $product_image->image = $pFile_name;
+                $product_image->image = strToSlug($pFile_name);
+                
                 $product_image->product_id = $product_id;
-                $pFile->move('resources/upload/detail/', $pFile_name);
+                $pFile->move('resources/upload/detail/', strToSlug($pFile_name));
                 $product_image->save();
             }
         }
@@ -112,14 +113,14 @@ class ProductController extends Controller
         if (!empty(Request::file('fImages'))) {
             $file = Request::file('fImages');
             $file_name = $file->getClientOriginalName();
-            $file->move('resources/upload/', $file_name);
+            $file->move('resources/upload/', strToSlug($file_name));
 //            Xóa file cũ
             $delImg = 'resources/upload/' . $product->image;
             if (\File::exists($delImg)) {
                 \File::delete($delImg);
             }
 //            Lưu tên file mới
-            $product->image = $file_name;
+            $product->image = strToSlug($file_name);
         }
 
         $product->keywords = Request::input('txtKeywords');
@@ -135,9 +136,9 @@ class ProductController extends Controller
                 if (isset($file_detail)) {
                     $productImage = new ProductImage();
                     $name = $file_detail->getClientOriginalName();
-                    $file_detail->move('resources/upload/detail/', $name);
+                    $file_detail->move('resources/upload/detail/', strToSlug($name));
                     $productImage->product_id = $id;
-                    $productImage->image = $name;
+                    $productImage->image = strToSlug($name);
                     $productImage->save();
                 }
             }
